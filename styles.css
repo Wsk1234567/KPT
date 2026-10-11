@@ -1993,3 +1993,40 @@ h3 {
   .header-actions { flex-shrink: 0; gap: 6px; }
   .emergency-chip { font-size: .6rem; padding: 8px 9px; letter-spacing: .03em; gap: 5px; }
 }
+
+/* Put the telephone action beside the vehicle, within the initial viewport. */
+.hero-dispatch { width: 100%; position: relative; }
+.dispatch-contact { position: relative; z-index: 4; margin: 24px auto 8px; }
+.dispatch-contact .hero-road__call { gap: 14px; }
+.dispatch-contact .hero-road__phone { font-family: var(--font-body); font-size: clamp(1.2rem, 2vw, 1.65rem); white-space: nowrap; }
+.hero-dispatch .ambulance-stage { margin-top: 0; }
+@media (min-width: 1100px) {
+  .hero-road__content { width: min(100% - 48px, 1520px); padding-top: 40px; padding-bottom: 42px; }
+  .hero-dispatch { display: grid; grid-template-columns: 240px minmax(0,920px); justify-content: center; align-items: center; gap: 28px; }
+  .dispatch-contact { margin: 0; }
+  .dispatch-contact .hero-road__call { flex-direction: column; align-items: flex-start; }
+  .dispatch-contact .hero-road__phone { font-size: clamp(1.3rem, 1.6vw, 1.65rem); }
+  .hero-dispatch .ambulance-stage { width: 100%; margin: 0; }
+}
+@media (max-width: 600px) {
+  .dispatch-contact { margin-top: 20px; }
+  .dispatch-contact .hero-road__phone { font-size: 1.18rem; }
+  .dispatch-contact .btn { padding: 12px 19px; }
+}
+@media (min-width: 1100px) {
+  .hero-dispatch .driving-road, .hero-dispatch .driving-lane { left: calc(50% - 50vw - 134px); }
+}
+/* Apply only the edited body-panel pixels, preserving the original vehicle and alpha. */
+.ambulance-panel-clean {
+  position: absolute; z-index: 2; pointer-events: none;
+  left: 59.375%; top: 70.3125%;
+  width: 5.208333%; height: 7.8125%; overflow: hidden;
+  mask-image: radial-gradient(circle at center, black 75%, transparent 100%);
+}
+.ambulance-panel-clean img {
+  position: absolute; max-width: none;
+  width: 1920%; height: 1280%; left: -1140%; top: -900%;
+}
+.hero-dispatch .driving-road {
+  background: repeating-linear-gradient(25deg, rgba(255,255,255,.015) 0 1px, transparent 1px 4px), linear-gradient(to bottom, transparent, #242827 16px);
+}
