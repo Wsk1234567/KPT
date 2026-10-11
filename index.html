@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="St. John Ambulans Malaysia, Kawasan Pahang Tengah — first aid, ambulance standby, training and community service in Central Pahang." />
+  <title>St. John Ambulans Malaysia · Kawasan Pahang Tengah</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;1,9..144,400;1,9..144,500&family=Inter:wght@400;500;600;650;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="theme-night">
+  <header class="site-header">
+    <div class="site-header__inner">
+      <a class="brand" href="index.html" aria-label="Home">
+        <svg class="brand__mark" viewBox="0 0 38 38" aria-hidden="true">
+          <circle cx="19" cy="19" r="18" fill="none" stroke="#3DF5C8" stroke-width="1" opacity="0.5"/>
+          <path d="M19 5 L21.4 15.2 L31.5 12.5 L24.2 19 L31.5 25.5 L21.4 22.8 L19 33 L16.6 22.8 L6.5 25.5 L13.8 19 L6.5 12.5 L16.6 15.2 Z" fill="#3DF5C8"/>
+        </svg>
+        <span class="brand__text">
+          <span class="brand__name">St. John Ambulans Malaysia</span>
+          <span class="brand__sub">Kawasan Pahang Tengah</span>
+        </span>
+      </a>
+
+      <nav class="nav" aria-label="Primary">
+        <a href="index.html" class="is-active">Home</a>
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="training.html">Training</a>
+        <a href="units.html">Units</a>
+        <a href="join.html">Join</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+
+      <div class="header-actions">
+        <!-- TODO: official emergency number -->
+        <a class="emergency-chip" href="tel:999">
+          <span class="dot-pulse" aria-hidden="true"></span>
+          Emergency
+        </a>
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="mobile-drawer" aria-label="Open menu">
+          <span></span>
+        </button>
+      </div>
+    </div>
+    <div class="drawer" id="mobile-drawer" hidden>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="services.html">Services</a>
+      <a href="training.html">Training</a>
+      <a href="units.html">Units</a>
+      <a href="join.html">Join</a>
+      <a href="contact.html">Contact</a>
+      <a class="btn btn--volt" href="join.html">Volunteer with us</a>
+    </div>
+  </header>
+
+  <main>
+    <!-- ===== Cinematic Hero ===== -->
+    <section class="hero-home" aria-label="Introduction">
+      <div class="hero-home__bg">
+        <!-- TODO: drop assets/hero.jpg and uncomment
+        <img src="assets/hero.jpg" alt="" />
+        -->
+      </div>
+      <div class="hero-home__noise" aria-hidden="true"></div>
+
+      <div class="hero-home__pulse" aria-hidden="true">
+        <svg viewBox="0 0 1440 80" preserveAspectRatio="none">
+          <path d="M0 40 H280 L320 40 L350 12 L380 68 L410 28 L450 40 H720 L760 40 L790 8 L820 72 L850 22 L890 40 H1440"/>
+        </svg>
+      </div>
+
+      <div class="hero-home__corners" aria-hidden="true">
+        <span class="c-tl">Est. Service · Pahang</span>
+        <span class="c-tr">01 / Dispatch</span>
+        <span class="c-bl">Central Pahang Area</span>
+        <span class="c-br"><span class="scroll-hint"></span> Scroll</span>
+      </div>
+
+      <div class="hero-home__content">
+        <div class="hero-home__eyebrow">
+          <span class="rule" aria-hidden="true"></span>
+          Kawasan Pahang Tengah
+        </div>
+        <h1>
+          <span class="line solid">Service for</span>
+          <span class="line volt">Mankind</span>
+        </h1>
+        <p class="hero-home__sub">
+          St. John Ambulans Malaysia — Central Pahang Area.
+          First aid, ambulance standby, training and youth,
+          ready when minutes matter.
+        </p>
+        <div class="hero-home__actions">
+          <a class="btn btn--volt" href="services.html">Explore Services</a>
+          <a class="btn btn--ghost-dark" href="contact.html">Request Coverage</a>
+        </div>
+        <dl class="hero-home__meta">
+          <div>
+            <dt>Network</dt>
+            <dd>SJAM Nationwide</dd>
+          </div>
+          <div>
+            <dt>Focus</dt>
+            <dd>First Aid · Ambulance · Youth</dd>
+          </div>
+          <div>
+            <dt>Hotline</dt>
+            <!-- TODO -->
+            <dd><a href="tel:+6090000000">+60 9-000 0000</a></dd>
+          </div>
+        </dl>
+      </div>
+    </section>
+
+    <!-- ===== Impact ===== -->
+    <section class="home-impact" aria-label="Impact">
+      <div class="wrap home-impact__grid">
+        <div class="stat reveal">
+          <div class="stat__value"><span data-count="60000">0</span>+</div>
+          <div class="stat__label">Volunteers across Malaysia</div>
+        </div>
+        <div class="stat reveal">
+          <div class="stat__value"><span data-count="3.6" data-decimals="1">0</span>M</div>
+          <div class="stat__label">Man-hours of service yearly</div>
+        </div>
+        <div class="stat reveal">
+          <div class="stat__value"><span data-count="135">0</span></div>
+          <div class="stat__label">Ambulances in the national fleet</div>
+        </div>
+        <div class="stat reveal">
+          <div class="stat__value"><span data-count="18">0</span></div>
+          <div class="stat__label">Dialysis &amp; care hubs</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Summary ===== -->
+    <section class="home-summary">
+      <div class="wrap">
+        <div class="section__head reveal">
+          <p class="label label--volt">What we stand for</p>
+          <h2>Calm hands.<br />Clear duty.</h2>
+        </div>
+        <div class="summary-grid">
+          <article class="summary-item reveal">
+            <span class="num-tag">01</span>
+            <h3>First in first aid</h3>
+            <p>Trained volunteers on duty at sporting events, festivals, parades and community functions — big or small.</p>
+            <a href="services.html">See services →</a>
+          </article>
+          <article class="summary-item reveal">
+            <span class="num-tag">02</span>
+            <h3>Ambulance ready</h3>
+            <p>Emergency and non-emergency transport, plus festive-season standby on major routes across the state.</p>
+            <a href="services.html">Ambulance detail →</a>
+          </article>
+          <article class="summary-item reveal">
+            <span class="num-tag">03</span>
+            <h3>Youth that lead</h3>
+            <p>Cadets and juniors grow through proficiency badges, drills and leadership training — ready for nation building.</p>
+            <a href="units.html">Our units →</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== News ===== -->
+    <section class="home-news">
+      <div class="wrap">
+        <div class="section__head reveal" style="flex-direction:row;display:flex;justify-content:space-between;align-items:end;max-width:none;">
+          <div>
+            <p class="label">Signal · Updates</p>
+            <h2 style="margin-top:14px;">What’s on</h2>
+          </div>
+          <a class="btn btn--ghost" href="join.html">Get involved</a>
+        </div>
+
+        <!-- TODO: real KPT announcements -->
+        <article class="news-row reveal">
+          <div class="news-row__date">12 Jun 2025</div>
+          <div>
+            <h3>Open recruitment for Cadet Instructors</h3>
+            <p class="muted">Support school Divisions across Kuantan and Temerloh this term.</p>
+          </div>
+          <a href="contact.html">Register interest →</a>
+        </article>
+        <article class="news-row reveal">
+          <div class="news-row__date">28 May 2025</div>
+          <div>
+            <h3>Corporate first aid workshop — limited seats</h3>
+            <p class="muted">Half-day AED &amp; choking response for SMEs in Central Pahang.</p>
+          </div>
+          <a href="training.html">Course details →</a>
+        </article>
+        <article class="news-row reveal">
+          <div class="news-row__date">10 May 2025</div>
+          <div>
+            <h3>Festive-season highway standby briefing</h3>
+            <p class="muted">Roster and logistics briefing for holiday-route duty.</p>
+          </div>
+          <a href="join.html">Join standby →</a>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <strong>St. John Ambulans Malaysia</strong>
+          <span>Kawasan Pahang Tengah · Central Pahang Area</span>
+          <span>Service for Mankind — First in First Aid.</span>
+        </div>
+        <div class="footer__col">
+          <h4>Pages</h4>
+          <a href="about.html">About</a>
+          <a href="services.html">Services</a>
+          <a href="training.html">Training</a>
+          <a href="units.html">Units</a>
+          <a href="join.html">Join</a>
+          <a href="contact.html">Contact</a>
+        </div>
+        <div class="footer__col">
+          <h4>Network</h4>
+          <!-- TODO -->
+          <a href="#" rel="noopener">Facebook</a>
+          <a href="#" rel="noopener">Instagram</a>
+          <a href="https://sjam.org.my" rel="noopener" target="_blank">SJAM National</a>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p>
+          © <span id="year">2025</span> St. John Ambulans Malaysia, Kawasan Pahang Tengah. All rights reserved.<br />
+          The names “St. John Ambulance of Malaysia”, “St. John Ambulans Malaysia” and the emblem are protected under the Laws of Malaysia and other laws where St. John Ambulance or the Order of St. John exists. Unauthorised use is prohibited.
+        </p>
+        <p>Night Dispatch</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>

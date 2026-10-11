@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Contact SJAM Kawasan Pahang Tengah for events, training, membership and partnerships." />
+  <title>Contact · SJAM Kawasan Pahang Tengah</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;1,9..144,400&family=Inter:wght@400;500;600;650;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="site-header__inner">
+      <a class="brand" href="index.html" aria-label="Home">
+        <svg class="brand__mark" viewBox="0 0 38 38" aria-hidden="true">
+          <circle cx="19" cy="19" r="18" fill="none" stroke="#121212" stroke-width="1" opacity="0.35"/>
+          <path d="M19 5 L21.4 15.2 L31.5 12.5 L24.2 19 L31.5 25.5 L21.4 22.8 L19 33 L16.6 22.8 L6.5 25.5 L13.8 19 L6.5 12.5 L16.6 15.2 Z" fill="#3DF5C8"/>
+        </svg>
+        <span class="brand__text">
+          <span class="brand__name">St. John Ambulans Malaysia</span>
+          <span class="brand__sub">Kawasan Pahang Tengah</span>
+        </span>
+      </a>
+      <nav class="nav" aria-label="Primary">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="training.html">Training</a>
+        <a href="units.html">Units</a>
+        <a href="join.html">Join</a>
+        <a href="contact.html" class="is-active">Contact</a>
+      </nav>
+      <div class="header-actions">
+        <a class="emergency-chip" href="tel:999"><span class="dot-pulse" aria-hidden="true"></span>Emergency</a>
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="mobile-drawer" aria-label="Open menu"><span></span></button>
+      </div>
+    </div>
+    <div class="drawer" id="mobile-drawer" hidden>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="services.html">Services</a>
+      <a href="training.html">Training</a>
+      <a href="units.html">Units</a>
+      <a href="join.html">Join</a>
+      <a href="contact.html">Contact</a>
+      <a class="btn btn--volt" href="join.html">Volunteer with us</a>
+    </div>
+  </header>
+
+  <main>
+    <header class="page-hero">
+      <div class="wrap">
+        <p class="label label--volt">Contact</p>
+        <h1>We’re listening.</h1>
+        <p class="lead">Event bookings, training, membership and general enquiries for Kawasan Pahang Tengah.</p>
+      </div>
+    </header>
+
+    <section class="section">
+      <div class="wrap contact-grid">
+        <div class="reveal">
+          <!-- TODO: replace with official KPT contact details -->
+          <ul class="contact-list">
+            <li>
+              <span class="label">Area headquarters</span>
+              <span>St. John Ambulans Malaysia<br />Kawasan Pahang Tengah<br />Jalan ____, 25xxx Kuantan, Pahang</span>
+            </li>
+            <li>
+              <span class="label">Phone</span>
+              <a href="tel:+6090000000">+60 9-000 0000</a>
+            </li>
+            <li>
+              <span class="label">Emergency</span>
+              <a href="tel:999">999</a>
+              <span class="muted">or your local emergency line</span>
+            </li>
+            <li>
+              <span class="label">Email</span>
+              <a href="mailto:kpt@sjam.org.my">kpt@sjam.org.my</a>
+            </li>
+            <li>
+              <span class="label">National</span>
+              <a href="https://sjam.org.my" rel="noopener" target="_blank">sjam.org.my</a>
+            </li>
+          </ul>
+        </div>
+
+        <form class="form reveal" action="mailto:kpt@sjam.org.my" method="post" enctype="text/plain">
+          <label>
+            Name
+            <input type="text" name="name" autocomplete="name" required placeholder="Your name" />
+          </label>
+          <label>
+            Email
+            <input type="email" name="email" autocomplete="email" required placeholder="you@example.com" />
+          </label>
+          <label>
+            Topic
+            <select name="topic">
+              <option>Event first aid / ambulance</option>
+              <option>Training course</option>
+              <option>Membership / volunteer</option>
+              <option>Donation / partnership</option>
+              <option>Other</option>
+            </select>
+          </label>
+          <label>
+            Message
+            <textarea name="message" required placeholder="Tell us what you need…"></textarea>
+          </label>
+          <button class="btn btn--volt" type="submit">Send message</button>
+          <p class="form__note">Static form opens your email client. Swap for a form backend when ready.</p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <strong>St. John Ambulans Malaysia</strong>
+          <span>Kawasan Pahang Tengah · Central Pahang Area</span>
+          <span>Service for Mankind — First in First Aid.</span>
+        </div>
+        <div class="footer__col">
+          <h4>Pages</h4>
+          <a href="about.html">About</a>
+          <a href="services.html">Services</a>
+          <a href="training.html">Training</a>
+          <a href="units.html">Units</a>
+          <a href="join.html">Join</a>
+          <a href="contact.html">Contact</a>
+        </div>
+        <div class="footer__col">
+          <h4>Network</h4>
+          <a href="#" rel="noopener">Facebook</a>
+          <a href="#" rel="noopener">Instagram</a>
+          <a href="https://sjam.org.my" rel="noopener" target="_blank">SJAM National</a>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p>© <span id="year">2025</span> St. John Ambulans Malaysia, Kawasan Pahang Tengah. All rights reserved.<br />The names “St. John Ambulance of Malaysia”, “St. John Ambulans Malaysia” and the emblem are protected under the Laws of Malaysia and other laws where St. John Ambulance or the Order of St. John exists. Unauthorised use is prohibited.</p>
+        <p>Night Dispatch</p>
+      </div>
+    </div>
+  </footer>
+  <script src="main.js"></script>
+</body>
+</html>

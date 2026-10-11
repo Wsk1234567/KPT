@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Volunteer, join or support SJAM Kawasan Pahang Tengah." />
+  <title>Join · SJAM Kawasan Pahang Tengah</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;1,9..144,400&family=Inter:wght@400;500;600;650;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="site-header__inner">
+      <a class="brand" href="index.html" aria-label="Home">
+        <svg class="brand__mark" viewBox="0 0 38 38" aria-hidden="true">
+          <circle cx="19" cy="19" r="18" fill="none" stroke="#121212" stroke-width="1" opacity="0.35"/>
+          <path d="M19 5 L21.4 15.2 L31.5 12.5 L24.2 19 L31.5 25.5 L21.4 22.8 L19 33 L16.6 22.8 L6.5 25.5 L13.8 19 L6.5 12.5 L16.6 15.2 Z" fill="#3DF5C8"/>
+        </svg>
+        <span class="brand__text">
+          <span class="brand__name">St. John Ambulans Malaysia</span>
+          <span class="brand__sub">Kawasan Pahang Tengah</span>
+        </span>
+      </a>
+      <nav class="nav" aria-label="Primary">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="training.html">Training</a>
+        <a href="units.html">Units</a>
+        <a href="join.html" class="is-active">Join</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <div class="header-actions">
+        <a class="emergency-chip" href="tel:999"><span class="dot-pulse" aria-hidden="true"></span>Emergency</a>
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="mobile-drawer" aria-label="Open menu"><span></span></button>
+      </div>
+    </div>
+    <div class="drawer" id="mobile-drawer" hidden>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="services.html">Services</a>
+      <a href="training.html">Training</a>
+      <a href="units.html">Units</a>
+      <a href="join.html">Join</a>
+      <a href="contact.html">Contact</a>
+      <a class="btn btn--volt" href="join.html">Volunteer with us</a>
+    </div>
+  </header>
+
+  <main>
+    <header class="page-hero">
+      <div class="wrap">
+        <p class="label label--volt">Join · Volunteer</p>
+        <h1>Four steps to wear the uniform.</h1>
+        <p class="lead">Whether you have two hours a month or two days a week — there is a place for you in Kawasan Pahang Tengah.</p>
+      </div>
+    </header>
+
+    <section class="section">
+      <div class="wrap split" style="align-items:start;">
+        <div class="steps reveal">
+          <div class="step">
+            <div class="step__num">01</div>
+            <div>
+              <h3>Apply</h3>
+              <p>Tell us your district, availability and whether you prefer event duty, training or youth work.</p>
+            </div>
+          </div>
+          <div class="step">
+            <div class="step__num">02</div>
+            <div>
+              <h3>Train</h3>
+              <p>Complete induction, first aid certification and unit-level skills sessions.</p>
+            </div>
+          </div>
+          <div class="step">
+            <div class="step__num">03</div>
+            <div>
+              <h3>Serve</h3>
+              <p>Join rosters for events, ambulance support and community programmes.</p>
+            </div>
+          </div>
+          <div class="step">
+            <div class="step__num">04</div>
+            <div>
+              <h3>Lead</h3>
+              <p>Progress into NCO / officer pathways and mentor the next generation of cadets.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="reveal">
+          <div class="media-frame media-frame--dark" style="margin-bottom:24px;">
+            <svg class="deco" viewBox="0 0 560 420" aria-hidden="true">
+              <rect width="560" height="420" fill="#161a19"/>
+              <circle cx="280" cy="200" r="90" fill="none" stroke="#3DF5C8" stroke-opacity="0.25" stroke-width="1.5"/>
+              <polyline points="0,240 120,240 150,180 180,300 210,210 250,240 560,240" fill="none" stroke="#3DF5C8" stroke-width="1.5" opacity="0.75"/>
+            </svg>
+            <div class="media-frame__caption">Photo · drop join.jpg here</div>
+          </div>
+          <div class="cta-panel">
+            <p class="label label--volt">Membership</p>
+            <h2 style="font-size:1.9rem;">Ready when called.</h2>
+            <p>Start your application — we’ll match you to a unit in Central Pahang.</p>
+            <div class="actions">
+              <a class="btn btn--volt" href="contact.html">Start application</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" style="padding-top:0;">
+      <div class="wrap">
+        <div class="cta-panel reveal" style="background:#0A0C0B;">
+          <p class="label label--volt">Donate &amp; partner</p>
+          <h2>Fuel the next callout.</h2>
+          <p>
+            Your contribution supports ambulance upkeep, training equipment, youth programmes and community outreach
+            across Central Pahang. Corporate CSR partnerships and in-kind sponsorship welcome.
+          </p>
+          <!-- TODO: official donation channels -->
+          <div class="actions">
+            <a class="btn btn--volt" href="contact.html">Donate to KPT</a>
+            <a class="btn btn--ghost-dark" href="contact.html">Corporate partnership</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <strong>St. John Ambulans Malaysia</strong>
+          <span>Kawasan Pahang Tengah · Central Pahang Area</span>
+          <span>Service for Mankind — First in First Aid.</span>
+        </div>
+        <div class="footer__col">
+          <h4>Pages</h4>
+          <a href="about.html">About</a>
+          <a href="services.html">Services</a>
+          <a href="training.html">Training</a>
+          <a href="units.html">Units</a>
+          <a href="join.html">Join</a>
+          <a href="contact.html">Contact</a>
+        </div>
+        <div class="footer__col">
+          <h4>Network</h4>
+          <a href="#" rel="noopener">Facebook</a>
+          <a href="#" rel="noopener">Instagram</a>
+          <a href="https://sjam.org.my" rel="noopener" target="_blank">SJAM National</a>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p>© <span id="year">2025</span> St. John Ambulans Malaysia, Kawasan Pahang Tengah. All rights reserved.<br />The names “St. John Ambulance of Malaysia”, “St. John Ambulans Malaysia” and the emblem are protected under the Laws of Malaysia and other laws where St. John Ambulance or the Order of St. John exists. Unauthorised use is prohibited.</p>
+        <p>Night Dispatch</p>
+      </div>
+    </div>
+  </footer>
+  <script src="main.js"></script>
+</body>
+</html>

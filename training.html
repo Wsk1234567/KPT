@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="First aid training courses from SJAM Kawasan Pahang Tengah — public, corporate and youth programmes." />
+  <title>Training · SJAM Kawasan Pahang Tengah</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;1,9..144,400&family=Inter:wght@400;500;600;650;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="site-header__inner">
+      <a class="brand" href="index.html" aria-label="Home">
+        <svg class="brand__mark" viewBox="0 0 38 38" aria-hidden="true">
+          <circle cx="19" cy="19" r="18" fill="none" stroke="#121212" stroke-width="1" opacity="0.35"/>
+          <path d="M19 5 L21.4 15.2 L31.5 12.5 L24.2 19 L31.5 25.5 L21.4 22.8 L19 33 L16.6 22.8 L6.5 25.5 L13.8 19 L6.5 12.5 L16.6 15.2 Z" fill="#3DF5C8"/>
+        </svg>
+        <span class="brand__text">
+          <span class="brand__name">St. John Ambulans Malaysia</span>
+          <span class="brand__sub">Kawasan Pahang Tengah</span>
+        </span>
+      </a>
+      <nav class="nav" aria-label="Primary">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="training.html" class="is-active">Training</a>
+        <a href="units.html">Units</a>
+        <a href="join.html">Join</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <div class="header-actions">
+        <a class="emergency-chip" href="tel:999"><span class="dot-pulse" aria-hidden="true"></span>Emergency</a>
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="mobile-drawer" aria-label="Open menu"><span></span></button>
+      </div>
+    </div>
+    <div class="drawer" id="mobile-drawer" hidden>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="services.html">Services</a>
+      <a href="training.html">Training</a>
+      <a href="units.html">Units</a>
+      <a href="join.html">Join</a>
+      <a href="contact.html">Contact</a>
+      <a class="btn btn--volt" href="join.html">Volunteer with us</a>
+    </div>
+  </header>
+
+  <main>
+    <header class="page-hero">
+      <div class="wrap">
+        <p class="label label--volt">Training</p>
+        <h1>Skills that save minutes — and lives.</h1>
+        <p class="lead">Practical first aid, CPR and AED training for the public, workplaces and schools across Central Pahang.</p>
+      </div>
+    </header>
+
+    <section class="section">
+      <div class="wrap split" style="align-items:start;">
+        <div class="reveal">
+          <div class="course-rows">
+            <!-- TODO: official fees & schedules -->
+            <article class="course-row">
+              <div class="course-row__top">
+                <h3>Basic First Aid &amp; CPR (Public)</h3>
+                <span class="course-row__price">from RM 180</span>
+              </div>
+              <p>One-day practical course covering bleeding, shock, fractures, CPR and AED use.</p>
+              <div class="course-row__tag">1 day · Certificate</div>
+            </article>
+            <article class="course-row">
+              <div class="course-row__top">
+                <h3>Workplace First Aid</h3>
+                <span class="course-row__price">on request</span>
+              </div>
+              <p>Custom modules for offices, factories and campuses. HRD Corp claimable options available.</p>
+              <div class="course-row__tag">Corporate · On-site</div>
+            </article>
+            <article class="course-row">
+              <div class="course-row__top">
+                <h3>Youth Cadet Training</h3>
+                <span class="course-row__price">unit-based</span>
+              </div>
+              <p>Drill, leadership and proficiency badges for school Divisions across Central Pahang.</p>
+              <div class="course-row__tag">Schools · Ongoing</div>
+            </article>
+            <article class="course-row">
+              <div class="course-row__top">
+                <h3>Community Awareness Talk</h3>
+                <span class="course-row__price">complimentary</span>
+              </div>
+              <p>Short talks for residents’ associations and public events on choking, CPR and emergency response.</p>
+              <div class="course-row__tag">Free · 45–90 min</div>
+            </article>
+          </div>
+        </div>
+
+        <aside class="reveal">
+          <div class="media-frame media-frame--dark" style="margin-bottom:24px;">
+            <svg class="deco" viewBox="0 0 560 420" aria-hidden="true">
+              <rect width="560" height="420" fill="#161a19"/>
+              <polyline points="40,220 160,220 190,140 230,300 270,180 310,220 520,220" fill="none" stroke="#3DF5C8" stroke-width="1.5" opacity="0.8"/>
+              <circle cx="280" cy="210" r="70" fill="none" stroke="#3DF5C8" stroke-opacity="0.2"/>
+            </svg>
+            <div class="media-frame__caption">Photo · drop training.jpg here</div>
+          </div>
+          <div class="cta-panel" style="padding:36px 28px;">
+            <p class="label label--volt">Organisations</p>
+            <h2 style="font-size:1.8rem;">Need a custom syllabus?</h2>
+            <p>Private cohorts at your venue — schools, factories, hotels and government agencies in Pahang.</p>
+            <div class="actions">
+              <a class="btn btn--volt" href="contact.html">Talk to training team</a>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <strong>St. John Ambulans Malaysia</strong>
+          <span>Kawasan Pahang Tengah · Central Pahang Area</span>
+          <span>Service for Mankind — First in First Aid.</span>
+        </div>
+        <div class="footer__col">
+          <h4>Pages</h4>
+          <a href="about.html">About</a>
+          <a href="services.html">Services</a>
+          <a href="training.html">Training</a>
+          <a href="units.html">Units</a>
+          <a href="join.html">Join</a>
+          <a href="contact.html">Contact</a>
+        </div>
+        <div class="footer__col">
+          <h4>Network</h4>
+          <a href="#" rel="noopener">Facebook</a>
+          <a href="#" rel="noopener">Instagram</a>
+          <a href="https://sjam.org.my" rel="noopener" target="_blank">SJAM National</a>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p>© <span id="year">2025</span> St. John Ambulans Malaysia, Kawasan Pahang Tengah. All rights reserved.<br />The names “St. John Ambulance of Malaysia”, “St. John Ambulans Malaysia” and the emblem are protected under the Laws of Malaysia and other laws where St. John Ambulance or the Order of St. John exists. Unauthorised use is prohibited.</p>
+        <p>Night Dispatch</p>
+      </div>
+    </div>
+  </footer>
+  <script src="main.js"></script>
+</body>
+</html>
