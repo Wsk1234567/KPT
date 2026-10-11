@@ -1912,23 +1912,23 @@ h3 {
 .ambulance-img { position: relative; z-index: 1; filter: none; }
 .driving-road {
   position: absolute;
-  top: 90.14%;
+  top: 85.5%;
   left: calc(50% - 50vw);
   width: 100vw;
   height: 200vh;
   z-index: -1;
-  background: linear-gradient(#26312d 0, #1c2521 95px, #1c2521 100%);
-  border-top: 2px solid #394a42;
-  box-shadow: 0 -8px 22px rgba(0,0,0,.12);
+  background: linear-gradient(to bottom, transparent, rgba(34,38,37,.8) 40px, #242827 100px), repeating-linear-gradient(25deg, rgba(255,255,255,.025) 0 1px, transparent 1px 4px);
+  border: 0;
+  box-shadow: none;
 }
-.driving-road::after {
+.driving-lane {
   content: "";
   position: absolute;
-  top: clamp(22px, 3vw, 45px);
+  top: 94.5%;
   left: 0;
   width: 200%;
   height: 4px;
-  background: repeating-linear-gradient(90deg, #50917d 0 58px, transparent 58px 150px);
+  background: repeating-linear-gradient(90deg, #E4B52C 0 58px, transparent 58px 150px);
   animation: lane-travel 1.15s linear infinite;
 }
 @keyframes lane-travel { to { transform: translateX(-150px); } }
@@ -1960,6 +1960,36 @@ h3 {
 }
 .hero-road__foot { position: relative; z-index: 3; }
 @media (prefers-reduced-motion: reduce) {
-  .driving-road::after, .alarm-flash { animation: none !important; }
+  .driving-lane, .alarm-flash { animation: none !important; }
   .alarm-flash { opacity: .15; }
+}
+
+
+/* Consistent white-backed emblem and a clear primary/secondary name hierarchy. */
+.brand__mark { filter: none; border-radius: 0; }
+.hero-road h1 { font-family: var(--font-body); font-weight: 600; line-height: 1.15; letter-spacing: -.035em; }
+.hero-road__kicker { margin-top: 4px; }
+.driving-lane { left: calc(50% - 50vw); width: 200vw; z-index: -1; pointer-events: none; }
+.ambulance-emblem {
+  position: absolute;
+  left: 19.010417%; /* 292 / 1536 */
+  top: 42.480469%; /* 435 / 1024 */
+  width: 13.020833%; /* 200 source px, including the logo's transparent margin */
+  aspect-ratio: 1;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  pointer-events: none;
+}
+.ambulance-emblem::before { content: ""; position: absolute; inset: 5%; border-radius: 50%; background: white; }
+.ambulance-emblem img { position: relative; display: block; width: 100%; height: 100%; object-fit: contain; }
+
+@media (max-width: 600px) {
+  .site-header__inner { width: calc(100% - 24px); gap: 8px; }
+  .brand { flex: 1; gap: 7px; }
+  .brand__mark { width: 34px; height: 34px; }
+  .brand__text { min-width: 0; }
+  .brand__name { font-size: .68rem; letter-spacing: 0; }
+  .brand__sub { font-size: .5rem; letter-spacing: .03em; margin-top: 3px; }
+  .header-actions { flex-shrink: 0; gap: 6px; }
+  .emergency-chip { font-size: .6rem; padding: 8px 9px; letter-spacing: .03em; gap: 5px; }
 }
