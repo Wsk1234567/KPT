@@ -58,19 +58,74 @@
   </header>
 
   <main>
-    <!-- ===== Cinematic Hero ===== -->
-    <section class="hero-home" aria-label="Introduction">
-      <div class="hero-home__bg">
-        <!-- TODO: drop assets/hero.jpg and uncomment
-        <img src="assets/hero.jpg" alt="" />
-        -->
-      </div>
-      <div class="hero-home__noise" aria-hidden="true"></div>
+    <!-- ===== Road Dispatch Hero ===== -->
+    <section class="hero-road" aria-label="Introduction">
+      <div class="road-sky" aria-hidden="true"></div>
+      <div class="road-stars" aria-hidden="true"></div>
 
-      <div class="hero-home__pulse" aria-hidden="true">
-        <svg viewBox="0 0 1440 80" preserveAspectRatio="none">
-          <path d="M0 40 H280 L320 40 L350 12 L380 68 L410 28 L450 40 H720 L760 40 L790 8 L820 72 L850 22 L890 40 H1440"/>
+      <!-- Parallax layers (duplicate tiles for seamless loop) -->
+      <div class="road-layer road-layer--far" aria-hidden="true">
+        <svg class="road-tile" viewBox="0 0 1600 220" preserveAspectRatio="none">
+          <path d="M0 220 V140 L120 90 L260 150 L400 70 L560 130 L720 60 L900 120 L1080 80 L1240 140 L1400 95 L1600 150 V220 Z" fill="#121816"/>
         </svg>
+        <svg class="road-tile" viewBox="0 0 1600 220" preserveAspectRatio="none">
+          <path d="M0 220 V140 L120 90 L260 150 L400 70 L560 130 L720 60 L900 120 L1080 80 L1240 140 L1400 95 L1600 150 V220 Z" fill="#121816"/>
+        </svg>
+      </div>
+
+      <div class="road-layer road-layer--mid" aria-hidden="true">
+        <svg class="road-tile" viewBox="0 0 1600 180" preserveAspectRatio="none">
+          <path d="M0 180 V120 H80 V70 H140 V120 H220 V50 H300 V120 H380 V85 H460 V120 H560 V40 H640 V120 H760 V75 H860 V120 H980 V55 H1080 V120 H1200 V80 H1300 V120 H1420 V65 H1500 V120 H1600 V180 Z" fill="#1a2420"/>
+          <circle cx="100" cy="48" r="2" fill="#3DF5C8" opacity="0.35"/>
+          <circle cx="300" cy="28" r="2" fill="#F0B429" opacity="0.3"/>
+          <circle cx="600" cy="20" r="2" fill="#3DF5C8" opacity="0.25"/>
+          <circle cx="1040" cy="32" r="2" fill="#F0B429" opacity="0.28"/>
+          <circle cx="1450" cy="40" r="2" fill="#3DF5C8" opacity="0.3"/>
+        </svg>
+        <svg class="road-tile" viewBox="0 0 1600 180" preserveAspectRatio="none">
+          <path d="M0 180 V120 H80 V70 H140 V120 H220 V50 H300 V120 H380 V85 H460 V120 H560 V40 H640 V120 H760 V75 H860 V120 H980 V55 H1080 V120 H1200 V80 H1300 V120 H1420 V65 H1500 V120 H1600 V180 Z" fill="#1a2420"/>
+          <circle cx="100" cy="48" r="2" fill="#3DF5C8" opacity="0.35"/>
+          <circle cx="300" cy="28" r="2" fill="#F0B429" opacity="0.3"/>
+          <circle cx="600" cy="20" r="2" fill="#3DF5C8" opacity="0.25"/>
+          <circle cx="1040" cy="32" r="2" fill="#F0B429" opacity="0.28"/>
+          <circle cx="1450" cy="40" r="2" fill="#3DF5C8" opacity="0.3"/>
+        </svg>
+      </div>
+
+      <div class="road-ground" aria-hidden="true">
+        <div class="road-layer road-layer--road">
+          <svg class="road-tile" viewBox="0 0 1600 100" preserveAspectRatio="none">
+            <rect y="0" width="1600" height="18" fill="#1c2422"/>
+            <rect y="18" width="1600" height="82" fill="#242c29"/>
+            <rect x="40" y="52" width="90" height="6" rx="2" fill="#3DF5C8" opacity="0.35"/>
+            <rect x="220" y="52" width="90" height="6" rx="2" fill="#3DF5C8" opacity="0.35"/>
+            <rect x="400" y="52" width="90" height="6" rx="2" fill="#3DF5C8" opacity="0.35"/>
+            <rect x="580" y="52" width="90" height="6" rx="2" fill="#3DF5C8" opacity="0.35"/>
+            <rect x="760" y="52" width="90" height="6" rx="2" fill="#3DF5C8" opacity="0.35"/>
+            <rect x="940" y="52" width="90" height="6" rx="2" fill="#3DF5C8" opacity="0.35"/>
+            <rect x="1120" y="52" width="90" height="6" rx="2" fill="#3DF5C8" opacity="0.35"/>
+            <rect x="1300" y="52" width="90" height="6" rx="2" fill="#3DF5C8" opacity="0.35"/>
+            <rect x="1480" y="52" width="90" height="6" rx="2" fill="#3DF5C8" opacity="0.35"/>
+          </svg>
+          <svg class="road-tile" viewBox="0 0 1600 100" preserveAspectRatio="none">
+            <rect y="0" width="1600" height="18" fill="#1c2422"/>
+            <rect y="18" width="1600" height="82" fill="#242c29"/>
+            <rect x="40" y="52" width="90" height="6" rx="2" fill="#3DF5C8" opacity="0.35"/>
+            <rect x="220" y="52" width="90" height="6" rx="2" fill="#3DF5C8" opacity="0.35"/>
+            <rect x="400" y="52" width="90" height="6" rx="2" fill="#3DF5C8" opacity="0.35"/>
+            <rect x="580" y="52" width="90" height="6" rx="2" fill="#3DF5C8" opacity="0.35"/>
+            <rect x="760" y="52" width="90" height="6" rx="2" fill="#3DF5C8" opacity="0.35"/>
+            <rect x="940" y="52" width="90" height="6" rx="2" fill="#3DF5C8" opacity="0.35"/>
+            <rect x="1120" y="52" width="90" height="6" rx="2" fill="#3DF5C8" opacity="0.35"/>
+            <rect x="1300" y="52" width="90" height="6" rx="2" fill="#3DF5C8" opacity="0.35"/>
+            <rect x="1480" y="52" width="90" height="6" rx="2" fill="#3DF5C8" opacity="0.35"/>
+          </svg>
+        </div>
+      </div>
+
+      <!-- Speed lines -->
+      <div class="speed-lines" aria-hidden="true">
+        <span></span><span></span><span></span>
       </div>
 
       <div class="hero-home__corners" aria-hidden="true">
@@ -80,39 +135,105 @@
         <span class="c-br"><span class="scroll-hint"></span> Scroll</span>
       </div>
 
-      <div class="hero-home__content">
-        <div class="hero-home__eyebrow">
-          <span class="rule" aria-hidden="true"></span>
-          Kawasan Pahang Tengah
+      <div class="hero-road__content">
+        <header class="hero-road__title reveal is-in">
+          <p class="hero-road__kicker">Kawasan Pahang Tengah</p>
+          <h1>
+            <span class="line solid">St. John Ambulans Malaysia</span>
+          </h1>
+        </header>
+
+        <!-- Ambulance (side view, facing right) -->
+        <div class="ambulance-stage reveal is-in" aria-hidden="true">
+          <div class="ambulance-bob">
+            <svg class="ambulance" viewBox="0 0 640 260" xmlns="http://www.w3.org/2000/svg">
+              <!-- ground shadow -->
+              <ellipse cx="320" cy="236" rx="260" ry="12" fill="#3DF5C8" opacity="0.08"/>
+              <!-- light beam (facing right) -->
+              <path d="M560 120 L630 90 L630 170 Z" fill="#3DF5C8" opacity="0.12"/>
+
+              <!-- box body -->
+              <path d="M70 80 H360 V190 H70 Z" fill="#E8EEF0"/>
+              <path d="M70 80 H360 V100 H70 Z" fill="#D5DEE1"/>
+              <!-- cab -->
+              <path d="M360 100 H500 L560 140 V190 H360 Z" fill="#E8EEF0"/>
+              <!-- windshield -->
+              <path d="M470 112 H512 L548 145 H470 Z" fill="#5A6E72"/>
+              <!-- side window -->
+              <rect x="390" y="112" width="60" height="36" rx="4" fill="#5A6E72"/>
+              <!-- lower dark band -->
+              <path d="M70 168 H560 V190 H70 Z" fill="#2A3330"/>
+              <!-- bumper -->
+              <rect x="545" y="175" width="30" height="22" rx="4" fill="#1a2220"/>
+              <rect x="55" y="175" width="24" height="22" rx="3" fill="#1a2220"/>
+
+              <!-- teal stripe -->
+              <rect x="70" y="128" width="290" height="10" fill="#3DF5C8"/>
+              <!-- cross on box -->
+              <g transform="translate(190 118)">
+                <rect x="-8" y="-28" width="16" height="56" rx="3" fill="#0A0C0B"/>
+                <rect x="-28" y="-8" width="56" height="16" rx="3" fill="#0A0C0B"/>
+                <rect x="-8" y="-28" width="16" height="56" rx="3" fill="#3DF5C8" opacity="0.35"/>
+                <rect x="-28" y="-8" width="56" height="16" rx="3" fill="#3DF5C8" opacity="0.35"/>
+              </g>
+              <!-- door line -->
+              <line x1="300" y1="90" x2="300" y2="168" stroke="#B0BBBF" stroke-width="2"/>
+              <!-- text mark -->
+              <text x="95" y="155" font-family="Inter,sans-serif" font-size="18" font-weight="700" fill="#0A0C0B" letter-spacing="3">ST. JOHN</text>
+
+              <!-- light bar -->
+              <rect x="120" y="58" width="200" height="18" rx="6" fill="#1a2220"/>
+              <rect class="beacon beacon-a" x="135" y="61" width="50" height="12" rx="3" fill="#3DF5C8"/>
+              <rect class="beacon beacon-b" x="200" y="61" width="50" height="12" rx="3" fill="#F0B429"/>
+              <rect class="beacon beacon-c" x="265" y="61" width="40" height="12" rx="3" fill="#3DF5C8"/>
+
+              <!-- headlights -->
+              <rect x="552" y="148" width="18" height="14" rx="3" fill="#F5F2D0"/>
+              <rect x="552" y="168" width="14" height="10" rx="2" fill="#E8A838"/>
+
+              <!-- wheels (outer = position, inner = spin) -->
+              <g transform="translate(150 190)">
+                <g class="wheel">
+                  <circle r="42" fill="#1a1f1e"/>
+                  <circle r="28" fill="#3A4542"/>
+                  <circle r="12" fill="#3DF5C8"/>
+                  <rect x="-3" y="-28" width="6" height="20" rx="2" fill="#2A3330"/>
+                  <rect x="-3" y="8" width="6" height="20" rx="2" fill="#2A3330"/>
+                  <rect x="-28" y="-3" width="20" height="6" rx="2" fill="#2A3330"/>
+                  <rect x="8" y="-3" width="20" height="6" rx="2" fill="#2A3330"/>
+                </g>
+              </g>
+              <g transform="translate(470 190)">
+                <g class="wheel">
+                  <circle r="42" fill="#1a1f1e"/>
+                  <circle r="28" fill="#3A4542"/>
+                  <circle r="12" fill="#3DF5C8"/>
+                  <rect x="-3" y="-28" width="6" height="20" rx="2" fill="#2A3330"/>
+                  <rect x="-3" y="8" width="6" height="20" rx="2" fill="#2A3330"/>
+                  <rect x="-28" y="-3" width="20" height="6" rx="2" fill="#2A3330"/>
+                  <rect x="8" y="-3" width="20" height="6" rx="2" fill="#2A3330"/>
+                </g>
+              </g>
+
+              <!-- wheel arches -->
+              <path d="M100 190 H200" stroke="#D5DEE1" stroke-width="8" stroke-linecap="round"/>
+              <path d="M420 190 H520" stroke="#D5DEE1" stroke-width="8" stroke-linecap="round"/>
+            </svg>
+          </div>
         </div>
-        <h1>
-          <span class="line solid">Service for</span>
-          <span class="line volt">Mankind</span>
-        </h1>
-        <p class="hero-home__sub">
-          St. John Ambulans Malaysia — Central Pahang Area.
-          First aid, ambulance standby, training and youth,
-          ready when minutes matter.
-        </p>
-        <div class="hero-home__actions">
-          <a class="btn btn--volt" href="services.html">Explore Services</a>
-          <a class="btn btn--ghost-dark" href="contact.html">Request Coverage</a>
-        </div>
-        <dl class="hero-home__meta">
-          <div>
-            <dt>Network</dt>
-            <dd>SJAM Nationwide</dd>
+
+        <footer class="hero-road__foot reveal is-in">
+          <p class="hero-road__tag">Transfer · Standby · Equipped</p>
+          <!-- TODO: official hotline -->
+          <div class="hero-road__call">
+            <a class="hero-road__phone" href="tel:+6090000000">+60 9-000 0000</a>
+            <a class="btn btn--volt" href="tel:+6090000000">Call Now</a>
           </div>
-          <div>
-            <dt>Focus</dt>
-            <dd>First Aid · Ambulance · Youth</dd>
+          <div class="hero-road__secondary">
+            <a class="btn btn--ghost-dark" href="services.html">Explore Services</a>
+            <a class="btn btn--ghost-dark" href="contact.html">Request Coverage</a>
           </div>
-          <div>
-            <dt>Hotline</dt>
-            <!-- TODO -->
-            <dd><a href="tel:+6090000000">+60 9-000 0000</a></dd>
-          </div>
-        </dl>
+        </footer>
       </div>
     </section>
 
