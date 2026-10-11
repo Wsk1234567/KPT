@@ -85,3 +85,44 @@
     counters.forEach(animateCount);
   }
 })();
+
+// Rotate original wheel pixels about the measured axle, without moving their centers.
+(() => {
+  const image = document.querySelector('.ambulance-img');
+  if (!image) return;
+  const motion = matchMedia('(prefers-reduced-motion: reduce)');
+  const wheels = [
+    { canvas: document.querySelector('.driving-wheel--rear'), x: 338, y: 808 },
+    { canvas: document.querySelector('.driving-wheel--front'), x: 1187, y: 808 }
+  ].filter(wheel => wheel.canvas);
+  let frame = 0;
+  let visible = true;
+  function paint(now) {
+    const angle = motion.matches ? 0 : (now % 1150) / 1150 * Math.PI * 2;
+    for (const wheel of wheels) {
+      const ctx = wheel.canvas.getContext('2d');
+      ctx.clearRect(0, 0, 460, 460);
+      ctx.save();
+      ctx.translate(230, 230);
+      ctx.beginPath();
+      ctx.arc(0, 0, 230, 0, Math.PI * 2);
+      ctx.clip();
+      ctx.rotate(angle);
+      ctx.drawImage(image, wheel.x - 115, wheel.y - 115, 230, 230, -230, -230, 460, 460);
+      ctx.restore();
+    }
+    frame = !motion.matches && visible && !document.hidden ? requestAnimationFrame(paint) : 0;
+  }
+  function restart() {
+    cancelAnimationFrame(frame);
+    if (image.complete && image.naturalWidth) paint(performance.now());
+  }
+  image.addEventListener('load', restart);
+  motion.addEventListener('change', restart);
+  document.addEventListener('visibilitychange', restart);
+  new IntersectionObserver(entries => {
+    visible = entries[0].isIntersecting;
+    restart();
+  }).observe(image);
+  restart();
+})();
