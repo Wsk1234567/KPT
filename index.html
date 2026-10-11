@@ -140,121 +140,21 @@
           </h1>
         </header>
 
-        <!-- Ambulance — clean flat Hiace illustration (Option A) -->
+        <!-- Ambulance — generated side PNG (contain, fixed body) -->
         <div class="ambulance-stage reveal is-in" aria-hidden="true">
-          <div class="ambulance-bob">
-            <svg class="ambulance" viewBox="0 0 720 280" xmlns="http://www.w3.org/2000/svg">
-              <defs>
-                <!-- Bold green/white diagonals -->
-                <pattern id="sg" width="56" height="40" patternUnits="userSpaceOnUse" patternTransform="skewX(-34)">
-                  <rect width="28" height="40" fill="#1F7A52"/>
-                  <rect x="28" width="28" height="40" fill="#F7FAF8"/>
-                </pattern>
-                <!-- Bold aqua/white diagonals -->
-                <pattern id="sa" width="48" height="36" patternUnits="userSpaceOnUse" patternTransform="skewX(-34)">
-                  <rect width="24" height="36" fill="#5CDBE6"/>
-                  <rect x="24" width="24" height="36" fill="#FAFDFE"/>
-                </pattern>
-                <linearGradient id="bodyG" x1="0" y1="0" x2="0" y2="1">
-                  <stop offset="0%" stop-color="#FFFFFF"/>
-                  <stop offset="100%" stop-color="#E8EEEB"/>
-                </linearGradient>
-              </defs>
-
-              <!-- soft ground -->
-              <ellipse cx="360" cy="258" rx="300" ry="10" fill="#3DF5C8" opacity="0.06"/>
-
-              <!-- ===== 1. Hiace silhouette ===== -->
-              <!-- raised conversion roof -->
-              <path d="M70 70 H400 C420 70 428 78 430 92 L432 100 H70 Z" fill="#F4F8F6"/>
-              <!-- main box + cab -->
-              <path d="M68 100 H430 L432 210 H68 Z" fill="url(#bodyG)"/>
-              <!-- cab / hood (Hiace short nose) -->
-              <path d="M430 118 H545 L600 138 L648 168 V210 H430 Z" fill="url(#bodyG)"/>
-              <!-- hood plane -->
-              <path d="M545 118 H600 L648 168 H545 Z" fill="#DCE6E1"/>
-              <!-- bumpers -->
-              <rect x="632" y="186" width="28" height="24" rx="4" fill="#1C2422"/>
-              <rect x="58" y="186" width="20" height="24" rx="3" fill="#1C2422"/>
-
-              <!-- ===== 2. Aqua awning stripe (bold) ===== -->
-              <path d="M72 88 H428 L436 112 H72 Z" fill="url(#sa)"/>
-              <rect x="72" y="110" width="364" height="3" fill="#0A0C0B" opacity="0.06"/>
-
-              <!-- ===== 3. Windows (simple black slabs) ===== -->
-              <!-- rear glass -->
-              <rect x="100" y="118" width="120" height="72" rx="6" fill="#121A18"/>
-              <!-- main side glass -->
-              <rect x="240" y="118" width="175" height="72" rx="5" fill="#121A18"/>
-              <!-- cab glass -->
-              <rect x="448" y="132" width="62" height="48" rx="4" fill="#121A18"/>
-              <!-- windshield -->
-              <path d="M530 134 H568 L608 168 H530 Z" fill="#121A18"/>
-
-              <!-- logo on rear glass -->
-              <image href="assets/sjam-logo-light.png" x="122" y="132" width="76" height="76" opacity="0.95"/>
-
-              <!-- minimal glass marks (not full decals) -->
-              <rect x="252" y="130" width="36" height="28" rx="3" fill="#D62828"/>
-              <text x="258" y="151" font-family="Inter,Arial,sans-serif" font-size="18" font-weight="800" fill="#fff">999</text>
-              <text x="300" y="148" font-family="Inter,Arial,sans-serif" font-size="16" font-weight="800" fill="#fff" letter-spacing="1">KKM</text>
-              <text x="300" y="168" font-family="Inter,Arial,sans-serif" font-size="8" font-weight="700" fill="#9AAAA0">Kesihatan Malaysia</text>
-
-              <!-- ===== 4. Huge side lettering ===== -->
-              <text x="130" y="200" font-family="Inter,Arial,sans-serif" font-size="22" font-weight="800" fill="#0E1210" letter-spacing="1.5">ST. JOHN AMBULANS MALAYSIA</text>
-              <text x="195" y="224" font-family="Inter,Arial,sans-serif" font-size="17" font-weight="800" fill="#0E1210" letter-spacing="3">PAHANG DARUL MAKMUR</text>
-
-              <!-- ===== 5. Bold green wrap stripe ===== -->
-              <path d="M68 228 H648 V250 H68 Z" fill="url(#sg)"/>
-              <!-- rear wrap corner -->
-              <path d="M68 214 H95 V228 H68 Z" fill="url(#sg)"/>
-
-              <!-- door seam (one line) -->
-              <line x1="232" y1="118" x2="232" y2="228" stroke="#B7C2BC" stroke-width="1.5"/>
-              <line x1="428" y1="118" x2="428" y2="228" stroke="#B7C2BC" stroke-width="1.5"/>
-
-              <!-- lights -->
-              <rect x="636" y="162" width="18" height="12" rx="2" fill="#F5F0C0"/>
-              <rect x="636" y="178" width="14" height="8" rx="2" fill="#E8A838"/>
-              <!-- vertical tail -->
-              <rect x="56" y="148" width="12" height="16" rx="2" fill="#E8A838"/>
-              <rect x="56" y="166" width="12" height="12" rx="2" fill="#EEF3F0"/>
-              <rect x="56" y="180" width="12" height="22" rx="2" fill="#C23B22"/>
-
-              <!-- red alarm bar -->
-              <rect x="230" y="52" width="150" height="14" rx="6" fill="#1C2422"/>
-              <rect class="beacon beacon-red beacon-a" x="242" y="55" width="40" height="8" rx="2" fill="#FF2A2A"/>
-              <rect class="beacon beacon-red beacon-b" x="292" y="55" width="40" height="8" rx="2" fill="#FF2A2A"/>
-              <rect class="beacon beacon-red beacon-c" x="342" y="55" width="22" height="8" rx="2" fill="#FF4D4D"/>
-
-              <!-- wheels -->
-              <g transform="translate(175 230)">
-                <g class="wheel">
-                  <circle r="42" fill="#121816"/>
-                  <circle r="27" fill="#D2CBB0"/>
-                  <circle r="11" fill="#EFE8D2"/>
-                  <rect x="-3" y="-26" width="6" height="18" rx="2" fill="#A89C80"/>
-                  <rect x="-3" y="8" width="6" height="18" rx="2" fill="#A89C80"/>
-                  <rect x="-26" y="-3" width="18" height="6" rx="2" fill="#A89C80"/>
-                  <rect x="8" y="-3" width="18" height="6" rx="2" fill="#A89C80"/>
-                </g>
-              </g>
-              <g transform="translate(520 230)">
-                <g class="wheel">
-                  <circle r="42" fill="#121816"/>
-                  <circle r="27" fill="#D2CBB0"/>
-                  <circle r="11" fill="#EFE8D2"/>
-                  <rect x="-3" y="-26" width="6" height="18" rx="2" fill="#A89C80"/>
-                  <rect x="-3" y="8" width="6" height="18" rx="2" fill="#A89C80"/>
-                  <rect x="-26" y="-3" width="18" height="6" rx="2" fill="#A89C80"/>
-                  <rect x="8" y="-3" width="18" height="6" rx="2" fill="#A89C80"/>
-                </g>
-              </g>
-
-              <!-- wheel arch cutouts -->
-              <path d="M125 230 H225" stroke="#E8EEEB" stroke-width="10" stroke-linecap="round"/>
-              <path d="M470 230 H570" stroke="#E8EEEB" stroke-width="10" stroke-linecap="round"/>
-            </svg>
+          <div class="ambulance-float">
+            <div class="ambulance-photo">
+              <img class="ambulance-img" src="assets/ambulance-side.png" width="1536" height="1024" alt="" />
+              <!-- wheel hubs: same speed spin around own center -->
+              <div class="wheel-pos wheel-pos--rear">
+                <img class="wheel-spin" src="assets/wheel-rear.png" width="216" height="216" alt="" />
+              </div>
+              <div class="wheel-pos wheel-pos--front">
+                <img class="wheel-spin" src="assets/wheel-front.png" width="216" height="216" alt="" />
+              </div>
+              <!-- roof alarm: local red strobe only -->
+              <div class="alarm-flash"></div>
+            </div>
           </div>
         </div>
 
