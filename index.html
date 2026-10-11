@@ -143,13 +143,19 @@
           </h1>
         </header>
 
-        <!-- Ambulance — livery from real SJAM Pahang unit (side, facing right) -->
+        <!-- Ambulance — real SJAM Pahang unit livery (side, facing right) -->
         <div class="ambulance-stage reveal is-in" aria-hidden="true">
           <div class="ambulance-bob">
             <svg class="ambulance" viewBox="0 0 640 260" xmlns="http://www.w3.org/2000/svg">
               <defs>
-                <pattern id="sj-stripe" width="28" height="28" patternUnits="userSpaceOnUse" patternTransform="skewX(-28)">
-                  <rect width="14" height="28" fill="#159B66"/>
+                <!-- lower wrap: green + white -->
+                <pattern id="sj-stripe-green" width="28" height="28" patternUnits="userSpaceOnUse" patternTransform="skewX(-28)">
+                  <rect width="14" height="28" fill="#1B8B5A"/>
+                  <rect x="14" width="14" height="28" fill="#F4F7F5"/>
+                </pattern>
+                <!-- roof edge: aqua + white -->
+                <pattern id="sj-stripe-aqua" width="28" height="28" patternUnits="userSpaceOnUse" patternTransform="skewX(-28)">
+                  <rect width="14" height="28" fill="#4DB6AC"/>
                   <rect x="14" width="14" height="28" fill="#F4F7F5"/>
                 </pattern>
                 <linearGradient id="body" x1="0" y1="0" x2="0" y2="1">
@@ -163,81 +169,97 @@
               <!-- headlight beam (right) -->
               <path d="M575 128 L640 100 L640 175 Z" fill="#3DF5C8" opacity="0.1"/>
 
+              <!-- raised roof (Hiace ambulance) -->
+              <path d="M70 58 H360 Q375 58 375 72 V78 H70 Z" fill="#F8FAF9"/>
+
               <!-- rear cabin box -->
               <path d="M62 72 H355 V188 H62 Z" fill="url(#body)"/>
               <!-- cab -->
               <path d="M355 95 H505 L575 138 V188 H355 Z" fill="url(#body)"/>
-              <!-- roof cap -->
-              <path d="M62 72 H355 V88 H62 Z" fill="#F8FAF9"/>
-              <!-- roof stripe band (green/white) -->
-              <rect x="62" y="72" width="293" height="14" fill="url(#sj-stripe)"/>
+
+              <!-- roof edge aqua/white stripe -->
+              <rect x="70" y="62" width="300" height="14" fill="url(#sj-stripe-aqua)"/>
 
               <!-- windows -->
               <rect x="385" y="108" width="70" height="38" rx="4" fill="#2C3835"/>
               <path d="M475 112 H515 L555 148 H475 Z" fill="#2C3835"/>
               <!-- rear window -->
-              <rect x="88" y="92" width="100" height="48" rx="4" fill="#2C3835"/>
-              <!-- St John circular mark on rear glass -->
-              <circle cx="138" cy="116" r="18" fill="none" stroke="#E8EEF0" stroke-width="2" opacity="0.85"/>
-              <path d="M138 104 L141 114 L151 111 L144 118 L151 125 L141 122 L138 132 L135 122 L125 125 L132 118 L125 111 L135 114 Z" fill="#E8EEF0" opacity="0.9"/>
+              <rect x="88" y="92" width="112" height="52" rx="4" fill="#2C3835"/>
 
-              <!-- side body lower green/white stripe -->
-              <rect x="62" y="168" width="513" height="18" fill="url(#sj-stripe)"/>
-              <!-- rocker dark -->
-              <rect x="62" y="186" width="513" height="10" fill="#1E2A26"/>
+              <!-- St John crest on rear glass -->
+              <circle cx="144" cy="118" r="20" fill="none" stroke="#E8EEF0" stroke-width="2" opacity="0.9"/>
+              <circle cx="144" cy="118" r="16" fill="none" stroke="#E8EEF0" stroke-width="1" opacity="0.5"/>
+              <path d="M144 104 L147.5 115 L158 111.5 L150 119 L158 126.5 L147.5 123 L144 134 L140.5 123 L130 126.5 L138 119 L130 111.5 L140.5 115 Z" fill="#E8EEF0" opacity="0.92"/>
 
-              <!-- side lettering -->
-              <text x="200" y="128" font-family="Inter, Arial, sans-serif" font-size="15" font-weight="800" fill="#111" letter-spacing="1.2">ST. JOHN AMBULANS MALAYSIA</text>
-              <text x="235" y="150" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="700" fill="#159B66" letter-spacing="2.5">PAHANG DARUL MAKMUR</text>
+              <!-- side window info (KKM / 999 / AED) -->
+              <rect x="214" y="98" width="128" height="58" rx="3" fill="#1a2220" opacity="0.55"/>
+              <rect x="222" y="106" width="34" height="28" rx="3" fill="#C23B22"/>
+              <text x="228" y="126" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="800" fill="#fff">999</text>
+              <text x="262" y="114" font-family="Inter, Arial, sans-serif" font-size="8" font-weight="700" fill="#fff" letter-spacing="0.5">KEMENTERIAN</text>
+              <text x="262" y="124" font-family="Inter, Arial, sans-serif" font-size="8" font-weight="700" fill="#fff" letter-spacing="0.5">KESIHATAN MALAYSIA</text>
+              <text x="262" y="138" font-family="Inter, Arial, sans-serif" font-size="6.5" font-weight="600" fill="#B8C4C0" letter-spacing="0.3">JARINGAN KERJASAMA AMBULANS</text>
+              <rect x="318" y="104" width="18" height="18" rx="2" fill="#fff"/>
+              <text x="320" y="116" font-family="Inter, Arial, sans-serif" font-size="6" font-weight="800" fill="#C23B22">AED</text>
+
+              <!-- side body lettering on white panel -->
+              <text x="95" y="152" font-family="Inter, Arial, sans-serif" font-size="15" font-weight="800" fill="#111" letter-spacing="1.1">ST. JOHN AMBULANS MALAYSIA</text>
+              <text x="138" y="170" font-family="Inter, Arial, sans-serif" font-size="12" font-weight="700" fill="#111" letter-spacing="2.2">PAHANG DARUL MAKMUR</text>
+
+              <!-- lower green/white wrap stripe -->
+              <rect x="62" y="176" width="513" height="14" fill="url(#sj-stripe-green)"/>
+              <rect x="62" y="188" width="513" height="8" fill="#1E2A26"/>
 
               <!-- door seams -->
               <line x1="250" y1="95" x2="250" y2="168" stroke="#C5CEC9" stroke-width="1.5"/>
               <line x1="355" y1="100" x2="355" y2="188" stroke="#C5CEC9" stroke-width="1.5"/>
 
-              <!-- front hood accent -->
+              <!-- front hood -->
               <path d="M505 120 H560 L575 138 H505 Z" fill="#DDE5E1"/>
 
-              <!-- bumper -->
+              <!-- bumpers -->
               <rect x="568" y="168" width="28" height="26" rx="4" fill="#2A3330"/>
               <rect x="58" y="168" width="18" height="26" rx="3" fill="#2A3330"/>
 
               <!-- headlights -->
               <rect x="568" y="145" width="16" height="12" rx="2" fill="#F7F2C8"/>
               <rect x="568" y="160" width="12" height="9" rx="2" fill="#E8A838"/>
-              <!-- tail lights (left = rear) -->
-              <rect x="58" y="120" width="12" height="28" rx="2" fill="#C23B22"/>
-              <rect x="58" y="152" width="12" height="12" rx="2" fill="#E8A838"/>
 
-              <!-- roof red AMBULANS mark -->
-              <text x="120" y="62" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="800" fill="#C23B22" letter-spacing="4">AMBULANS</text>
+              <!-- rear light stack (orange / white / red) -->
+              <rect x="54" y="112" width="14" height="14" rx="2" fill="#E8A838"/>
+              <rect x="54" y="128" width="14" height="12" rx="2" fill="#E8EEF0"/>
+              <rect x="54" y="142" width="14" height="18" rx="2" fill="#C23B22"/>
 
-              <!-- light bar -->
-              <rect x="200" y="52" width="130" height="16" rx="5" fill="#1E2A26"/>
-              <rect class="beacon beacon-a" x="212" y="55" width="36" height="10" rx="2" fill="#3DF5C8"/>
-              <rect class="beacon beacon-b" x="256" y="55" width="36" height="10" rx="2" fill="#F0B429"/>
-              <rect class="beacon beacon-c" x="300" y="55" width="18" height="10" rx="2" fill="#3DF5C8"/>
+              <!-- reflective marker hints -->
+              <rect x="78" y="150" width="10" height="10" fill="none" stroke="#C23B22" stroke-width="1" opacity="0.7"/>
+              <rect x="500" y="150" width="10" height="10" fill="none" stroke="#C23B22" stroke-width="1" opacity="0.7"/>
+
+              <!-- RED alarm bar (flashing) -->
+              <rect x="200" y="48" width="130" height="14" rx="5" fill="#1E2A26"/>
+              <rect class="beacon beacon-red beacon-a" x="212" y="51" width="36" height="8" rx="2" fill="#FF2A2A"/>
+              <rect class="beacon beacon-red beacon-b" x="256" y="51" width="36" height="8" rx="2" fill="#FF2A2A"/>
+              <rect class="beacon beacon-red beacon-c" x="300" y="51" width="18" height="8" rx="2" fill="#FF4D4D"/>
 
               <!-- wheels -->
               <g transform="translate(155 190)">
                 <g class="wheel">
                   <circle r="40" fill="#141816"/>
-                  <circle r="26" fill="#8A9490"/>
-                  <circle r="11" fill="#C5CEC9"/>
-                  <rect x="-2.5" y="-26" width="5" height="18" rx="2" fill="#5E6A66"/>
-                  <rect x="-2.5" y="8" width="5" height="18" rx="2" fill="#5E6A66"/>
-                  <rect x="-26" y="-2.5" width="18" height="5" rx="2" fill="#5E6A66"/>
-                  <rect x="8" y="-2.5" width="18" height="5" rx="2" fill="#5E6A66"/>
+                  <circle r="26" fill="#C8C0A8"/>
+                  <circle r="11" fill="#E8E0C8"/>
+                  <rect x="-2.5" y="-26" width="5" height="18" rx="2" fill="#A89C80"/>
+                  <rect x="-2.5" y="8" width="5" height="18" rx="2" fill="#A89C80"/>
+                  <rect x="-26" y="-2.5" width="18" height="5" rx="2" fill="#A89C80"/>
+                  <rect x="8" y="-2.5" width="18" height="5" rx="2" fill="#A89C80"/>
                 </g>
               </g>
               <g transform="translate(475 190)">
                 <g class="wheel">
                   <circle r="40" fill="#141816"/>
-                  <circle r="26" fill="#8A9490"/>
-                  <circle r="11" fill="#C5CEC9"/>
-                  <rect x="-2.5" y="-26" width="5" height="18" rx="2" fill="#5E6A66"/>
-                  <rect x="-2.5" y="8" width="5" height="18" rx="2" fill="#5E6A66"/>
-                  <rect x="-26" y="-2.5" width="18" height="5" rx="2" fill="#5E6A66"/>
-                  <rect x="8" y="-2.5" width="18" height="5" rx="2" fill="#5E6A66"/>
+                  <circle r="26" fill="#C8C0A8"/>
+                  <circle r="11" fill="#E8E0C8"/>
+                  <rect x="-2.5" y="-26" width="5" height="18" rx="2" fill="#A89C80"/>
+                  <rect x="-2.5" y="8" width="5" height="18" rx="2" fill="#A89C80"/>
+                  <rect x="-26" y="-2.5" width="18" height="5" rx="2" fill="#A89C80"/>
+                  <rect x="8" y="-2.5" width="18" height="5" rx="2" fill="#A89C80"/>
                 </g>
               </g>
 

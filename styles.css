@@ -1778,3 +1778,17 @@ h3 {
 .hero-road__title {
   max-width: 920px;
 }
+
+/* Red alarm beacons */
+.beacon-red {
+  filter: drop-shadow(0 0 6px rgba(255, 42, 42, 0.85));
+  animation: beacon-red 0.85s steps(2, end) infinite;
+}
+
+.beacon-red.beacon-b { animation-delay: 0.2s; }
+.beacon-red.beacon-c { animation-delay: 0.4s; }
+
+@keyframes beacon-red {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.15; }
+}
