@@ -1968,7 +1968,7 @@ h3 {
 /* Consistent white-backed emblem and a clear primary/secondary name hierarchy. */
 .brand__mark { filter: none; border-radius: 0; }
 .hero-road h1 { font-family: var(--font-body); font-weight: 600; line-height: 1.15; letter-spacing: -.035em; }
-.hero-road__kicker { margin-top: 4px; }
+.hero-road__kicker { margin-top: 4px; font-size: clamp(15px, 1.3vw, 20px); line-height: 1.5; letter-spacing: .16em; }
 .driving-lane { left: calc(50% - 50vw); width: 200vw; z-index: -1; pointer-events: none; }
 .ambulance-emblem {
   position: absolute;
