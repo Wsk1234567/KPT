@@ -140,157 +140,120 @@
           </h1>
         </header>
 
-        <!-- Ambulance — Hiace conversion silhouette + real SJAM Pahang livery -->
+        <!-- Ambulance — clean flat Hiace illustration (Option A) -->
         <div class="ambulance-stage reveal is-in" aria-hidden="true">
           <div class="ambulance-bob">
-            <svg class="ambulance" viewBox="0 0 680 280" xmlns="http://www.w3.org/2000/svg">
+            <svg class="ambulance" viewBox="0 0 720 280" xmlns="http://www.w3.org/2000/svg">
               <defs>
-                <pattern id="sj-stripe-green" width="32" height="32" patternUnits="userSpaceOnUse" patternTransform="skewX(-32)">
-                  <rect width="16" height="32" fill="#1F7A52"/>
-                  <rect x="16" width="16" height="32" fill="#F4F7F5"/>
+                <!-- Bold green/white diagonals -->
+                <pattern id="sg" width="56" height="40" patternUnits="userSpaceOnUse" patternTransform="skewX(-34)">
+                  <rect width="28" height="40" fill="#1F7A52"/>
+                  <rect x="28" width="28" height="40" fill="#F7FAF8"/>
                 </pattern>
-                <pattern id="sj-stripe-aqua" width="30" height="30" patternUnits="userSpaceOnUse" patternTransform="skewX(-32)">
-                  <rect width="15" height="30" fill="#5CD8E4"/>
-                  <rect x="15" width="15" height="30" fill="#F7FBFC"/>
+                <!-- Bold aqua/white diagonals -->
+                <pattern id="sa" width="48" height="36" patternUnits="userSpaceOnUse" patternTransform="skewX(-34)">
+                  <rect width="24" height="36" fill="#5CDBE6"/>
+                  <rect x="24" width="24" height="36" fill="#FAFDFE"/>
                 </pattern>
-                <linearGradient id="body" x1="0" y1="0" x2="0" y2="1">
+                <linearGradient id="bodyG" x1="0" y1="0" x2="0" y2="1">
                   <stop offset="0%" stop-color="#FFFFFF"/>
-                  <stop offset="55%" stop-color="#F3F6F4"/>
-                  <stop offset="100%" stop-color="#E2E8E5"/>
+                  <stop offset="100%" stop-color="#E8EEEB"/>
                 </linearGradient>
-                <clipPath id="glass-clip">
-                  <rect x="250" y="92" width="175" height="62" rx="3"/>
-                </clipPath>
               </defs>
 
-              <!-- ground shadow -->
-              <ellipse cx="340" cy="252" rx="290" ry="12" fill="#3DF5C8" opacity="0.07"/>
-              <!-- headlight beam -->
-              <path d="M600 140 L670 112 L670 185 Z" fill="#3DF5C8" opacity="0.08"/>
+              <!-- soft ground -->
+              <ellipse cx="360" cy="258" rx="300" ry="10" fill="#3DF5C8" opacity="0.06"/>
 
-              <!-- Hiace conversion raised roof -->
-              <path d="M78 62 H390 Q410 62 412 78 V86 H78 Z" fill="#FAFCFB"/>
-              <!-- roof valance aqua/white awning stripe (signature) -->
-              <path d="M82 86 H410 L418 100 H82 Z" fill="url(#sj-stripe-aqua)"/>
-              <!-- valance soft shadow -->
-              <rect x="82" y="98" width="336" height="4" fill="#0A0C0B" opacity="0.08"/>
+              <!-- ===== 1. Hiace silhouette ===== -->
+              <!-- raised conversion roof -->
+              <path d="M70 70 H400 C420 70 428 78 430 92 L432 100 H70 Z" fill="#F4F8F6"/>
+              <!-- main box + cab -->
+              <path d="M68 100 H430 L432 210 H68 Z" fill="url(#bodyG)"/>
+              <!-- cab / hood (Hiace short nose) -->
+              <path d="M430 118 H545 L600 138 L648 168 V210 H430 Z" fill="url(#bodyG)"/>
+              <!-- hood plane -->
+              <path d="M545 118 H600 L648 168 H545 Z" fill="#DCE6E1"/>
+              <!-- bumpers -->
+              <rect x="632" y="186" width="28" height="24" rx="4" fill="#1C2422"/>
+              <rect x="58" y="186" width="20" height="24" rx="3" fill="#1C2422"/>
 
-              <!-- body: rear box -->
-              <path d="M70 86 H395 V210 H70 Z" fill="url(#body)"/>
-              <!-- cab: short hood + raked A-pillar (Hiace) -->
-              <path d="M395 108 H530 L575 118 L615 150 V210 H395 Z" fill="url(#body)"/>
-              <!-- hood wedge -->
-              <path d="M530 118 H575 L615 150 H530 Z" fill="#E8EEEA"/>
-              <!-- front bumper -->
-              <path d="M600 178 H632 V210 H588 Z" fill="#2A3330"/>
-              <!-- rear bumper -->
-              <rect x="62" y="198" width="22" height="22" rx="3" fill="#2A3330"/>
+              <!-- ===== 2. Aqua awning stripe (bold) ===== -->
+              <path d="M72 88 H428 L436 112 H72 Z" fill="url(#sa)"/>
+              <rect x="72" y="110" width="364" height="3" fill="#0A0C0B" opacity="0.06"/>
 
-              <!-- windshield (raked) -->
-              <path d="M500 122 H535 L575 152 H500 Z" fill="#1E2A26"/>
-              <!-- cab window -->
-              <rect x="430" y="122" width="58" height="42" rx="3" fill="#1E2A26"/>
-              <!-- sliding door glass (sticker panel) -->
-              <rect x="250" y="100" width="165" height="78" rx="3" fill="#141C19"/>
-              <!-- rear quarter glass -->
-              <rect x="118" y="100" width="118" height="78" rx="3" fill="#141C19"/>
+              <!-- ===== 3. Windows (simple black slabs) ===== -->
+              <!-- rear glass -->
+              <rect x="100" y="118" width="120" height="72" rx="6" fill="#121A18"/>
+              <!-- main side glass -->
+              <rect x="240" y="118" width="175" height="72" rx="5" fill="#121A18"/>
+              <!-- cab glass -->
+              <rect x="448" y="132" width="62" height="48" rx="4" fill="#121A18"/>
+              <!-- windshield -->
+              <path d="M530 134 H568 L608 168 H530 Z" fill="#121A18"/>
 
-              <!-- St John logo on rear glass -->
-              <image href="assets/sjam-logo-light.png" x="138" y="112" width="78" height="78" opacity="0.95"/>
+              <!-- logo on rear glass -->
+              <image href="assets/sjam-logo-light.png" x="122" y="132" width="76" height="76" opacity="0.95"/>
 
-              <!-- ===== Window sticker group (sliding glass) ===== -->
-              <!-- 999 block -->
-              <text x="258" y="118" font-family="Inter,Arial,sans-serif" font-size="7.5" font-weight="700" fill="#fff" letter-spacing="0.3">UNTUK KECEMASAN</text>
-              <text x="258" y="128" font-family="Inter,Arial,sans-serif" font-size="7.5" font-weight="700" fill="#fff" letter-spacing="0.3">Hubungi:</text>
-              <rect x="258" y="132" width="52" height="34" rx="3" fill="#D62828"/>
-              <text x="264" y="156" font-family="Inter,Arial,sans-serif" font-size="20" font-weight="800" fill="#fff">999</text>
-              <text x="258" y="172" font-family="Inter,Arial,sans-serif" font-size="5.5" font-weight="700" fill="#F0D080" letter-spacing="0.2">TALIAN KECEMASAN NEGARA</text>
+              <!-- minimal glass marks (not full decals) -->
+              <rect x="252" y="130" width="36" height="28" rx="3" fill="#D62828"/>
+              <text x="258" y="151" font-family="Inter,Arial,sans-serif" font-size="18" font-weight="800" fill="#fff">999</text>
+              <text x="300" y="148" font-family="Inter,Arial,sans-serif" font-size="16" font-weight="800" fill="#fff" letter-spacing="1">KKM</text>
+              <text x="300" y="168" font-family="Inter,Arial,sans-serif" font-size="8" font-weight="700" fill="#9AAAA0">Kesihatan Malaysia</text>
 
-              <!-- KKM block -->
-              <text x="320" y="122" font-family="Inter,Arial,sans-serif" font-size="13" font-weight="800" fill="#fff">Kementerian</text>
-              <text x="320" y="140" font-family="Inter,Arial,sans-serif" font-size="13" font-weight="800" fill="#fff">Kesihatan</text>
-              <text x="320" y="158" font-family="Inter,Arial,sans-serif" font-size="13" font-weight="800" fill="#fff">Malaysia</text>
+              <!-- ===== 4. Huge side lettering ===== -->
+              <text x="130" y="200" font-family="Inter,Arial,sans-serif" font-size="22" font-weight="800" fill="#0E1210" letter-spacing="1.5">ST. JOHN AMBULANS MALAYSIA</text>
+              <text x="195" y="224" font-family="Inter,Arial,sans-serif" font-size="17" font-weight="800" fill="#0E1210" letter-spacing="3">PAHANG DARUL MAKMUR</text>
 
-              <!-- network line -->
-              <rect x="250" y="178" width="165" height="16" fill="#0E1613" opacity="0.85"/>
-              <text x="254" y="185" font-family="Inter,Arial,sans-serif" font-size="6.2" font-weight="700" fill="#fff" letter-spacing="0.4">JARINGAN KERJASAMA MA AMBULANS</text>
-              <text x="254" y="191.5" font-family="Inter,Arial,sans-serif" font-size="5.2" font-weight="600" fill="#B8C4C0">KKM + St. John Ambulans Malaysia + Bulan Sabit Merah Malaysia</text>
+              <!-- ===== 5. Bold green wrap stripe ===== -->
+              <path d="M68 228 H648 V250 H68 Z" fill="url(#sg)"/>
+              <!-- rear wrap corner -->
+              <path d="M68 214 H95 V228 H68 Z" fill="url(#sg)"/>
 
-              <!-- AED sticker -->
-              <rect x="402" y="112" width="22" height="34" rx="2" fill="#fff"/>
-              <text x="405" y="122" font-family="Inter,Arial,sans-serif" font-size="5.5" font-weight="800" fill="#111">AED</text>
-              <text x="405" y="129" font-family="Inter,Arial,sans-serif" font-size="4.5" font-weight="700" fill="#C23B22">ON-BOARD</text>
-              <circle cx="413" cy="138" r="5" fill="none" stroke="#C23B22" stroke-width="1.2"/>
-              <path d="M413 134 v8 M409 138 h8" stroke="#C23B22" stroke-width="1.2"/>
+              <!-- door seam (one line) -->
+              <line x1="232" y1="118" x2="232" y2="228" stroke="#B7C2BC" stroke-width="1.5"/>
+              <line x1="428" y1="118" x2="428" y2="228" stroke="#B7C2BC" stroke-width="1.5"/>
 
-              <!-- ===== Side lettering (dominant) ===== -->
-              <text x="145" y="172" font-family="Inter,Arial,sans-serif" font-size="17" font-weight="800" fill="#111" letter-spacing="1.2">ST. JOHN AMBULANS MALAYSIA</text>
-              <text x="205" y="192" font-family="Inter,Arial,sans-serif" font-size="14" font-weight="800" fill="#111" letter-spacing="2.4">PAHANG DARUL MAKMUR</text>
+              <!-- lights -->
+              <rect x="636" y="162" width="18" height="12" rx="2" fill="#F5F0C0"/>
+              <rect x="636" y="178" width="14" height="8" rx="2" fill="#E8A838"/>
+              <!-- vertical tail -->
+              <rect x="56" y="148" width="12" height="16" rx="2" fill="#E8A838"/>
+              <rect x="56" y="166" width="12" height="12" rx="2" fill="#EEF3F0"/>
+              <rect x="56" y="180" width="12" height="22" rx="2" fill="#C23B22"/>
 
-              <!-- ===== Green/white wrap stripe (bold) ===== -->
-              <path d="M70 198 H615 V210 H70 Z" fill="url(#sj-stripe-green)"/>
-              <!-- rear corner stripe wrap -->
-              <path d="M70 188 H92 V198 H70 Z" fill="url(#sj-stripe-green)"/>
+              <!-- red alarm bar -->
+              <rect x="230" y="52" width="150" height="14" rx="6" fill="#1C2422"/>
+              <rect class="beacon beacon-red beacon-a" x="242" y="55" width="40" height="8" rx="2" fill="#FF2A2A"/>
+              <rect class="beacon beacon-red beacon-b" x="292" y="55" width="40" height="8" rx="2" fill="#FF2A2A"/>
+              <rect class="beacon beacon-red beacon-c" x="342" y="55" width="22" height="8" rx="2" fill="#FF4D4D"/>
 
-              <!-- rocker -->
-              <rect x="70" y="210" width="545" height="10" fill="#1E2A26"/>
-
-              <!-- door seams -->
-              <line x1="245" y1="110" x2="245" y2="198" stroke="#C5CEC9" stroke-width="1.5"/>
-              <line x1="425" y1="118" x2="425" y2="198" stroke="#C5CEC9" stroke-width="1.5"/>
-              <!-- handles -->
-              <rect x="232" y="155" width="18" height="5" rx="2" fill="#8A9490"/>
-              <rect x="412" y="155" width="14" height="5" rx="2" fill="#8A9490"/>
-
-              <!-- headlights -->
-              <rect x="608" y="152" width="18" height="12" rx="2" fill="#F7F2C8"/>
-              <rect x="608" y="168" width="14" height="9" rx="2" fill="#E8A838"/>
-              <!-- vertical tail stack: orange / white / red -->
-              <rect x="64" y="128" width="12" height="14" rx="2" fill="#E8A838"/>
-              <rect x="64" y="144" width="12" height="12" rx="2" fill="#E8EEF0"/>
-              <rect x="64" y="158" width="12" height="22" rx="2" fill="#C23B22"/>
-              <!-- tail light chrome seams -->
-              <rect x="63" y="127" width="14" height="1" fill="#9AA5A0"/>
-              <rect x="63" y="142" width="14" height="1" fill="#9AA5A0"/>
-              <rect x="63" y="156" width="14" height="1" fill="#9AA5A0"/>
-              <rect x="63" y="181" width="14" height="1" fill="#9AA5A0"/>
-
-              <!-- reflective marker -->
-              <rect x="84" y="188" width="12" height="8" fill="none" stroke="#C23B22" stroke-width="1" opacity="0.75"/>
-
-              <!-- RED alarm bar -->
-              <rect x="220" y="48" width="140" height="12" rx="5" fill="#1E2A26"/>
-              <rect class="beacon beacon-red beacon-a" x="232" y="50" width="38" height="8" rx="2" fill="#FF2A2A"/>
-              <rect class="beacon beacon-red beacon-b" x="278" y="50" width="38" height="8" rx="2" fill="#FF2A2A"/>
-              <rect class="beacon beacon-red beacon-c" x="324" y="50" width="22" height="8" rx="2" fill="#FF4D4D"/>
-
-              <!-- wheels (Hiace steel) -->
-              <g transform="translate(165 210)">
+              <!-- wheels -->
+              <g transform="translate(175 230)">
                 <g class="wheel">
-                  <circle r="38" fill="#121816"/>
-                  <circle r="24" fill="#D4CDB4"/>
-                  <circle r="10" fill="#EDE6D0"/>
-                  <rect x="-2.5" y="-24" width="5" height="16" rx="2" fill="#A89C80"/>
-                  <rect x="-2.5" y="8" width="5" height="16" rx="2" fill="#A89C80"/>
-                  <rect x="-24" y="-2.5" width="16" height="5" rx="2" fill="#A89C80"/>
-                  <rect x="8" y="-2.5" width="16" height="5" rx="2" fill="#A89C80"/>
+                  <circle r="42" fill="#121816"/>
+                  <circle r="27" fill="#D2CBB0"/>
+                  <circle r="11" fill="#EFE8D2"/>
+                  <rect x="-3" y="-26" width="6" height="18" rx="2" fill="#A89C80"/>
+                  <rect x="-3" y="8" width="6" height="18" rx="2" fill="#A89C80"/>
+                  <rect x="-26" y="-3" width="18" height="6" rx="2" fill="#A89C80"/>
+                  <rect x="8" y="-3" width="18" height="6" rx="2" fill="#A89C80"/>
                 </g>
               </g>
-              <g transform="translate(500 210)">
+              <g transform="translate(520 230)">
                 <g class="wheel">
-                  <circle r="38" fill="#121816"/>
-                  <circle r="24" fill="#D4CDB4"/>
-                  <circle r="10" fill="#EDE6D0"/>
-                  <rect x="-2.5" y="-24" width="5" height="16" rx="2" fill="#A89C80"/>
-                  <rect x="-2.5" y="8" width="5" height="16" rx="2" fill="#A89C80"/>
-                  <rect x="-24" y="-2.5" width="16" height="5" rx="2" fill="#A89C80"/>
-                  <rect x="8" y="-2.5" width="16" height="5" rx="2" fill="#A89C80"/>
+                  <circle r="42" fill="#121816"/>
+                  <circle r="27" fill="#D2CBB0"/>
+                  <circle r="11" fill="#EFE8D2"/>
+                  <rect x="-3" y="-26" width="6" height="18" rx="2" fill="#A89C80"/>
+                  <rect x="-3" y="8" width="6" height="18" rx="2" fill="#A89C80"/>
+                  <rect x="-26" y="-3" width="18" height="6" rx="2" fill="#A89C80"/>
+                  <rect x="8" y="-3" width="18" height="6" rx="2" fill="#A89C80"/>
                 </g>
               </g>
 
-              <!-- wheel arches -->
-              <path d="M120 210 H210" stroke="#E8EEEA" stroke-width="8" stroke-linecap="round"/>
-              <path d="M455 210 H545" stroke="#E8EEEA" stroke-width="8" stroke-linecap="round"/>
+              <!-- wheel arch cutouts -->
+              <path d="M125 230 H225" stroke="#E8EEEB" stroke-width="10" stroke-linecap="round"/>
+              <path d="M470 230 H570" stroke="#E8EEEB" stroke-width="10" stroke-linecap="round"/>
             </svg>
           </div>
         </div>
