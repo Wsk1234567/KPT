@@ -105,7 +105,8 @@
       ctx.save();
       ctx.translate(230, 230);
       ctx.beginPath();
-      ctx.arc(0, 0, 230, 0, Math.PI * 2);
+      // Rotate only the rim; the outer crop includes pale wheel-arch pixels.
+      ctx.arc(0, 0, 142, 0, Math.PI * 2);
       ctx.clip();
       ctx.rotate(angle);
       ctx.drawImage(image, wheel.x - 115, wheel.y - 115, 230, 230, -230, -230, 460, 460);
