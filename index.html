@@ -14,7 +14,7 @@
   <header class="site-header">
     <div class="site-header__inner">
       <a class="brand" href="index.html" aria-label="Home">
-        <img class="brand__mark" src="assets/sjam-logo-light.png" width="38" height="38" alt="" />
+        <img class="brand__mark" src="assets/sjam-logo-white.png" width="38" height="38" alt="" />
         <span class="brand__text">
           <span class="brand__name">St. John Ambulans Malaysia</span>
           <span class="brand__sub">Kawasan Pahang Tengah</span>
@@ -126,38 +126,52 @@
       </div>
 
       <div class="hero-home__corners" aria-hidden="true">
-        <span class="c-tl">Est. Service · Pahang</span>
-        <span class="c-tr">01 / Dispatch</span>
         <span class="c-bl">Central Pahang Area</span>
         <span class="c-br"><span class="scroll-hint"></span> Scroll</span>
       </div>
 
       <div class="hero-road__content">
         <header class="hero-road__title reveal is-in">
-          <p class="hero-road__kicker">Kawasan Pahang Tengah</p>
           <h1>
             <span class="line solid">St. John Ambulans Malaysia</span>
           </h1>
+          <p class="hero-road__kicker">Kawasan Pahang Tengah</p>
         </header>
 
+        <div class="hero-dispatch">
+          <aside class="dispatch-contact" aria-labelledby="dispatch-contact-title">
+            <h2 id="dispatch-contact-title" class="dispatch-contact__title">Ready to Respond</h2>
+            <p class="dispatch-contact__description">Non Emergency</p>
+            <!-- Enable contact actions once the official phone and WhatsApp numbers are confirmed. -->
+            <div class="hero-road__call">
+              <p class="hero-road__phone">+60 9-000 0000</p>
+              <div class="dispatch-contact__actions">
+                <button class="btn btn--volt" type="button" disabled>Call Now</button>
+                <button class="btn dispatch-contact__whatsapp" type="button" disabled>WhatsApp</button>
+              </div>
+            </div>
+          </aside>
         <!-- Ambulance — generated side PNG (contain, fixed body) -->
         <div class="ambulance-stage reveal is-in" aria-hidden="true">
           <div class="ambulance-float">
             <div class="ambulance-photo">
+              <div class="driving-road"></div>
+              <div class="driving-lane"></div>
               <img class="ambulance-img" src="assets/ambulance-side.png" width="1536" height="1024" alt="" />
+              <span class="ambulance-panel-clean"><img src="assets/ambulance-clean-side.png" width="1536" height="1024" alt="" /></span>
+              <span class="ambulance-window-clean"><img src="assets/ambulance-window-clean.png" width="1536" height="1024" alt="" /></span>
+              <span class="ambulance-emblem"><img src="assets/sjam-logo-white.png" width="1254" height="1254" alt="" /></span>
+              <canvas class="driving-wheel driving-wheel--rear" width="460" height="460"></canvas>
+              <canvas class="driving-wheel driving-wheel--front" width="460" height="460"></canvas>
               <!-- roof alarm: local red strobe only -->
               <div class="alarm-flash"></div>
             </div>
           </div>
         </div>
+        </div>
 
         <footer class="hero-road__foot reveal is-in">
           <p class="hero-road__tag">Transfer · Standby · Equipped</p>
-          <!-- TODO: official hotline -->
-          <div class="hero-road__call">
-            <a class="hero-road__phone" href="tel:+6090000000">+60 9-000 0000</a>
-            <a class="btn btn--volt" href="tel:+6090000000">Call Now</a>
-          </div>
           <div class="hero-road__secondary">
             <a class="btn btn--ghost-dark" href="services.html">Explore Services</a>
             <a class="btn btn--ghost-dark" href="contact.html">Request Coverage</a>
