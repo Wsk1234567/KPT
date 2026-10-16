@@ -2166,3 +2166,146 @@ h3 {
     grid-template-columns: repeat(4, 1fr);
   }
 }
+
+
+/* =========================================================
+   SJA UK-inspired UI layer (black / white / St John yellow)
+   ========================================================= */
+:root {
+  --sjam-yellow: #ffe500;
+  --sjam-yellow-deep: #f0d800;
+  --sjam-black: #0b0b0b;
+}
+
+/* Primary CTA = yellow like stjohn.org.uk */
+.btn--volt {
+  background: var(--sjam-yellow) !important;
+  color: var(--sjam-black) !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.02em;
+}
+.btn--volt:hover {
+  background: var(--sjam-yellow-deep) !important;
+  color: var(--sjam-black) !important;
+  box-shadow: 0 12px 40px -12px rgba(255, 229, 0, 0.45) !important;
+}
+
+.btn--ghost {
+  border-color: var(--sjam-black) !important;
+}
+.theme-night .btn--ghost-dark,
+.btn--ghost-dark {
+  border-color: rgba(255, 229, 0, 0.55) !important;
+  color: var(--sjam-yellow) !important;
+}
+.theme-night .btn--ghost-dark:hover,
+.btn--ghost-dark:hover {
+  background: var(--sjam-yellow) !important;
+  color: var(--sjam-black) !important;
+  border-color: var(--sjam-yellow) !important;
+}
+
+/* Utility bar (UK style) */
+.utility-bar {
+  background: var(--sjam-black);
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+.utility-bar__inner {
+  width: min(100% - 40px, var(--max));
+  margin: 0 auto;
+  min-height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+  padding: 8px 0;
+}
+.utility-bar a {
+  color: var(--sjam-yellow);
+}
+.utility-bar a:hover {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+.utility-bar__links {
+  display: flex;
+  gap: 18px;
+  flex-wrap: wrap;
+}
+
+/* Header CTA strip */
+.header-cta {
+  display: inline-flex;
+  align-items: center;
+  padding: 10px 18px;
+  border-radius: 999px;
+  background: var(--sjam-yellow);
+  color: var(--sjam-black);
+  font-size: 0.82rem;
+  font-weight: 750;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+.header-cta:hover {
+  background: var(--sjam-yellow-deep);
+}
+
+/* Help cards more retail / UK-course-card */
+.help-card {
+  border-radius: 10px;
+  overflow: hidden;
+  padding: 0;
+}
+.help-card > * {
+  padding-left: 22px;
+  padding-right: 22px;
+}
+.help-card__tag {
+  padding-top: 22px;
+  color: var(--sjam-black);
+  opacity: 0.55;
+}
+.help-card h3 {
+  font-family: var(--font-display);
+  font-size: 1.55rem;
+  font-weight: 500;
+}
+.help-card p {
+  padding-bottom: 4px;
+}
+.help-card__go {
+  margin: 18px 0 0;
+  padding: 16px 22px;
+  background: var(--sjam-black);
+  color: var(--sjam-yellow);
+  font-weight: 700;
+}
+.help-card:hover .help-card__go {
+  background: var(--sjam-yellow);
+  color: var(--sjam-black);
+}
+
+/* Yellow label accents on light sections */
+.help-band .label {
+  color: var(--sjam-black) !important;
+}
+.help-band .label::before {
+  background: var(--sjam-yellow);
+  border-color: var(--sjam-yellow);
+}
+
+/* Stronger page hero on inner pages */
+.page-hero {
+  background: linear-gradient(180deg, #fff 0%, var(--paper) 100%);
+  border-bottom: 4px solid var(--sjam-yellow);
+}
+
+/* Yellow rule under section heads */
+.section__head h2 {
+  position: relative;
+}
