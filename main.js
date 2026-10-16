@@ -143,3 +143,20 @@
   tick();
   setInterval(tick, 20000);
 })();
+
+
+/* Status clocks */
+(function () {
+  function pad(n) { return String(n).padStart(2, '0'); }
+  function tick() {
+    var d = new Date();
+    var s = pad(d.getHours()) + ':' + pad(d.getMinutes());
+    var a = document.getElementById('os-clock');
+    if (a) a.textContent = s;
+    document.querySelectorAll('.os-clock-mini').forEach(function (el) {
+      el.textContent = s;
+    });
+  }
+  tick();
+  setInterval(tick, 20000);
+})();

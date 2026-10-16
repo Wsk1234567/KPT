@@ -2364,3 +2364,23 @@ h3 {
   font-weight: 700;
   letter-spacing: 0.08em;
 }
+
+
+.utility-bar__links {
+  gap: 14px !important;
+}
+.utility-mini {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: rgba(242, 240, 234, 0.75);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 11px;
+  font-weight: 650;
+  white-space: nowrap;
+}
+.utility-mini .os-led {
+  width: 7px;
+  height: 7px;
+}
