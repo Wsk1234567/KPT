@@ -13,7 +13,7 @@
 <body class="theme-night">
   <div class="utility-bar">
     <div class="utility-bar__inner">
-      <span>St. John Ambulans Malaysia · Kawasan Pahang Tengah</span>
+      <span><span class="os-led"></span> UNIT READY · KAWASAN PAHANG TENGAH · CH-01</span>
       <div class="utility-bar__links">
         <a href="training.html">Book training</a>
         <a href="services.html">Event cover</a>
@@ -194,6 +194,17 @@
 
 
     <!-- ===== How can we help ===== -->
+    
+    <!-- Dispatch status (visible strip) -->
+    <section class="status-strip" aria-label="Dispatch status">
+      <div class="wrap status-strip__row">
+        <div class="status-strip__item"><span class="os-led"></span><span>ZONE</span><strong>PAHANG TENGAH</strong></div>
+        <div class="status-strip__item"><span class="os-led"></span><span>UNIT</span><strong>READY</strong></div>
+        <div class="status-strip__item"><span class="os-led os-led--amber"></span><span>MODE</span><strong>STANDBY</strong></div>
+        <div class="status-strip__item"><span class="os-led os-led--red"></span><span>LOCAL</span><strong id="os-clock">--:--</strong></div>
+      </div>
+    </section>
+
     <section class="help-band" id="help" aria-label="How can we help">
       <div class="wrap">
         <div class="section__head reveal">

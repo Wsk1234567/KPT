@@ -2309,3 +2309,58 @@ h3 {
 .section__head h2 {
   position: relative;
 }
+
+
+/* Visible dispatch status strip (no hero frame) */
+.os-led {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--voltage);
+  box-shadow: 0 0 8px var(--voltage);
+  display: inline-block;
+  vertical-align: middle;
+}
+.os-led--amber {
+  background: var(--amber);
+  box-shadow: 0 0 8px var(--amber);
+}
+.os-led--red {
+  background: #ff4d4d;
+  box-shadow: 0 0 8px #ff4d4d;
+}
+
+.status-strip {
+  background: var(--night);
+  color: rgba(242, 240, 234, 0.55);
+  padding: 18px 0;
+  border-bottom: 1px solid rgba(61, 245, 200, 0.12);
+  font-family: var(--font-body);
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+.status-strip__row {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+}
+@media (min-width: 800px) {
+  .status-strip__row {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 12px;
+  }
+}
+.status-strip__item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 14px;
+  border: 1px solid rgba(61, 245, 200, 0.18);
+  background: rgba(61, 245, 200, 0.04);
+}
+.status-strip__item strong {
+  color: var(--voltage);
+  font-weight: 700;
+  letter-spacing: 0.08em;
+}
