@@ -13,7 +13,7 @@
 <body class="theme-night">
   <div class="utility-bar">
     <div class="utility-bar__inner">
-      <span>St John Ambulans Malaysia · Kawasan Pahang Tengah</span>
+      <span><span class="os-led"></span> UNIT READY · KAWASAN PAHANG TENGAH · CH-01</span>
       <div class="utility-bar__links">
         <a href="training.html">Book training</a>
         <a href="services.html">Event cover</a>
@@ -194,6 +194,13 @@
 
 
     <!-- ===== How can we help (light band) ===== -->
+    
+    <div class="os-status" aria-label="Dispatch status">
+      <div class="os-status__item"><span class="os-led"></span><span>ZONE</span><strong>PAHANG TENGAH</strong></div>
+      <div class="os-status__item"><span class="os-led"></span><span>UNIT</span><strong>READY</strong></div>
+      <div class="os-status__item"><span class="os-led os-led--amber"></span><span>MODE</span><strong>STANDBY</strong></div>
+      <div class="os-status__item"><span class="os-led os-led--red"></span><span>LOCAL</span><strong id="os-clock">--:--</strong></div>
+    </div>
     <section class="help-band" id="help" aria-label="How can we help">
       <div class="wrap">
         <div class="section__head reveal">
@@ -202,25 +209,29 @@
           <p class="muted">Clear paths for organisers, families, learners and volunteers in Central Pahang.</p>
         </div>
         <div class="help-grid">
-          <a class="help-card reveal" href="services.html">
+          <a class="help-card reveal">
+            <span class="help-card__ch">01</span> href="services.html">
             <span class="help-card__tag">Book</span>
             <h3>Event first aid</h3>
             <p>Medical standby and first aid posts for races, festivals, school meets and corporate days.</p>
             <span class="help-card__go">Request coverage &rarr;</span>
           </a>
-          <a class="help-card reveal" href="services.html">
+          <a class="help-card reveal">
+            <span class="help-card__ch">02</span> href="services.html">
             <span class="help-card__tag">Transfer</span>
             <h3>Ambulance support</h3>
             <p>Non-emergency transfers and standby cover with trained crews.</p>
             <span class="help-card__go">Talk to us &rarr;</span>
           </a>
-          <a class="help-card reveal" href="training.html">
+          <a class="help-card reveal">
+            <span class="help-card__ch">03</span> href="training.html">
             <span class="help-card__tag">Learn</span>
             <h3>First aid &amp; CPR</h3>
             <p>Public courses, workplace training and youth cadet programmes.</p>
             <span class="help-card__go">View courses &rarr;</span>
           </a>
-          <a class="help-card reveal" href="join.html">
+          <a class="help-card reveal">
+            <span class="help-card__ch">04</span> href="join.html">
             <span class="help-card__tag">Join</span>
             <h3>Volunteer with us</h3>
             <p>Wear the uniform, learn real skills, and serve Central Pahang.</p>
@@ -379,6 +390,13 @@
 
   <footer class="site-footer">
     <div class="wrap">
+      
+      <div class="os-instrument" aria-label="Instrument strip">
+        <div class="os-instrument__cell">HOTLINE<strong>+60 9-000 0000</strong></div>
+        <div class="os-instrument__cell">EMERGENCY<strong>999 / Kecemasan</strong></div>
+        <div class="os-instrument__cell">COVERAGE<strong>Central Pahang</strong></div>
+        <div class="os-instrument__cell">NETWORK<strong>SJAM Nationwide</strong></div>
+      </div>
       <div class="footer__grid">
         <div class="footer__brand">
           <strong>St. John Ambulans Malaysia</strong>
