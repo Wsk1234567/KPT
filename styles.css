@@ -2384,3 +2384,88 @@ h3 {
   width: 7px;
   height: 7px;
 }
+
+
+/* ===== Introduction band ===== */
+.intro-band {
+  background: var(--night);
+  color: var(--paper);
+  padding: 88px 0 72px;
+  border-bottom: 1px solid var(--line-dark);
+}
+.intro-grid {
+  display: grid;
+  gap: 40px;
+  align-items: center;
+}
+.intro-brand {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 28px;
+}
+.intro-logo {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+.intro-name {
+  margin: 0;
+  font-size: 0.95rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+}
+.intro-area {
+  margin: 4px 0 0;
+  font-size: 11px;
+  font-weight: 650;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--quiet-dark);
+}
+.intro-slogan {
+  font-family: var(--font-display);
+  font-size: clamp(2.6rem, 6vw, 4.25rem);
+  line-height: 1.05;
+  letter-spacing: -0.03em;
+  margin: 0 0 20px;
+  color: var(--paper);
+}
+.intro-desc {
+  margin: 0 0 28px;
+  max-width: 34em;
+  font-size: 1.08rem;
+  line-height: 1.7;
+  color: var(--quiet-dark);
+}
+.intro-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+.intro-photo {
+  margin: 0;
+  display: grid;
+  gap: 12px;
+}
+.intro-photo__frame {
+  position: relative;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  border: 1px solid rgba(61, 245, 200, 0.15);
+  background: #1a2420;
+}
+.intro-caption {
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--quiet-dark);
+}
+@media (min-width: 900px) {
+  .intro-grid {
+    grid-template-columns: 1.05fr 0.95fr;
+    gap: 56px;
+  }
+}
