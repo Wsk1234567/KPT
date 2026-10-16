@@ -128,17 +128,3 @@
   restart();
 })();
 
-
-/* Dispatch OS clock */
-(function () {
-  var el = document.getElementById('os-clock');
-  if (!el) return;
-  function tick() {
-    var d = new Date();
-    var hh = String(d.getHours()).padStart(2, '0');
-    var mm = String(d.getMinutes()).padStart(2, '0');
-    el.textContent = hh + ':' + mm;
-  }
-  tick();
-  setInterval(tick, 20000);
-})();
