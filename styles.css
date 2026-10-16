@@ -1420,7 +1420,7 @@ h3 {
 }
 
 /* =========================================================
-   Road Dispatch Hero ¡ª ambulance drive-by
+   Road Dispatch Hero ï¿½ï¿½ ambulance drive-by
    ========================================================= */
 
 .hero-road {
@@ -1757,7 +1757,7 @@ h3 {
   }
 }
 
-/* Wheel spin fix ¡ª center origin on fill box */
+/* Wheel spin fix ï¿½ï¿½ center origin on fill box */
 .ambulance .wheel {
   transform-box: fill-box;
   transform-origin: center;
@@ -1826,7 +1826,7 @@ h3 {
   filter: drop-shadow(0 18px 28px rgba(0, 0, 0, 0.28));
 }
 
-/* Wheel spin overlays ¡ª positioned from source PNG (1536x1024) */
+/* Wheel spin overlays ï¿½ï¿½ positioned from source PNG (1536x1024) */
 .wheel-pos {
   position: absolute;
   width: 14.1%;
@@ -1853,7 +1853,7 @@ h3 {
   transform-origin: 50% 50%;
 }
 
-/* Roof alarm: local red strobe ¡ª 2 flashes, pause, repeat */
+/* Roof alarm: local red strobe ï¿½ï¿½ 2 flashes, pause, repeat */
 .alarm-flash {
   position: absolute;
   left: 58%;
@@ -2090,3 +2090,79 @@ h3 {
   left: -96%; top: -167.5%;
 }
 .ambulance-emblem { width: 9.114583%; }
+
+
+/* ===== How can we help (stjohn.org.uk-style clear paths) ===== */
+.help-band {
+  background: var(--paper);
+  color: var(--ink);
+  padding: 88px 0 72px;
+  border-bottom: 1px solid var(--line-light);
+}
+
+.help-band h2 {
+  color: var(--ink);
+}
+
+.help-grid {
+  display: grid;
+  gap: 14px;
+}
+
+.help-card {
+  display: grid;
+  gap: 10px;
+  padding: 28px 24px;
+  background: #fff;
+  border: 1px solid var(--line-light);
+  border-top: 2px solid transparent;
+  transition: border-color 0.25s var(--ease), transform 0.25s var(--ease), box-shadow 0.25s;
+  color: var(--ink);
+  text-decoration: none;
+}
+
+.help-card:hover {
+  border-top-color: var(--voltage);
+  transform: translateY(-3px);
+  box-shadow: 0 16px 40px -24px rgba(18, 18, 18, 0.25);
+}
+
+.help-card__tag {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--voltage);
+  filter: brightness(0.72);
+}
+
+.help-card h3 {
+  font-size: 1.35rem;
+  font-weight: 650;
+  letter-spacing: -0.02em;
+}
+
+.help-card p {
+  margin: 0;
+  color: var(--quiet-light);
+  font-size: 0.95rem;
+}
+
+.help-card__go {
+  margin-top: 6px;
+  font-size: 0.9rem;
+  font-weight: 650;
+}
+
+@media (min-width: 800px) {
+  .help-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+}
+
+@media (min-width: 1100px) {
+  .help-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
