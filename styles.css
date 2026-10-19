@@ -2511,3 +2511,38 @@ h3 {
 .intro-actions {
   justify-content: center;
 }
+
+
+/* Intro sizes from sketch: narrow title block, full-bleed photo */
+.intro-stack {
+  width: 100%;
+  max-width: none;
+  gap: 22px;
+}
+.intro-brand {
+  margin-bottom: 8px;
+  justify-content: center;
+}
+.intro-slogan {
+  max-width: 14em;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: clamp(2.2rem, 4.5vw, 3.25rem);
+}
+.intro-photo {
+  width: 100vw;
+  max-width: 100vw;
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
+}
+.intro-photo__frame {
+  width: 100%;
+  aspect-ratio: 21 / 8;
+  min-height: 260px;
+  border-left: none;
+  border-right: none;
+}
+.intro-caption {
+  text-align: center;
+  padding: 10px 16px 0;
+}
