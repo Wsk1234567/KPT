@@ -2469,3 +2469,45 @@ h3 {
     gap: 56px;
   }
 }
+
+
+/* Intro stacked layout (logo -> slogan -> photo -> pills) */
+.intro-stack {
+  display: grid;
+  gap: 28px;
+  justify-items: center;
+  text-align: center;
+}
+.intro-stack .intro-brand {
+  justify-content: center;
+}
+.intro-stack .intro-slogan {
+  margin-bottom: 4px;
+}
+.intro-stack .intro-photo {
+  width: 100%;
+}
+.intro-stack .intro-photo__frame {
+  width: 100%;
+  aspect-ratio: 21 / 9;
+  min-height: 220px;
+}
+.intro-stack .intro-desc {
+  display: none;
+}
+.btn--pill {
+  min-width: 160px;
+  padding: 14px 28px;
+  border-radius: 999px;
+  border: 1.5px solid var(--voltage);
+  color: var(--voltage);
+  background: transparent;
+  font-weight: 650;
+}
+.btn--pill:hover {
+  background: var(--voltage);
+  color: var(--night);
+}
+.intro-actions {
+  justify-content: center;
+}
