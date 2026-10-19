@@ -2582,3 +2582,13 @@ h3 {
   aspect-ratio: 4 / 1 !important;
   max-height: 320px !important;
 }
+
+
+.intro-photo__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 35%;
+  display: block;
+}
+
