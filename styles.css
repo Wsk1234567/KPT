@@ -3357,3 +3357,138 @@ h3 {
     transform: translateY(12px) !important;
   }
 }
+
+
+/* ===== HELP CARDS v4 — flyout overlay; grid NEVER reflows ===== */
+.help-grid {
+  display: grid !important;
+  grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+  gap: 28px 22px !important;
+  width: min(100% - 40px, 1180px) !important;
+  max-width: min(100% - 40px, 1180px) !important;
+  margin: 0 auto !important;
+  padding: 40px 0 52px !important;
+  align-items: start;
+  overflow: visible !important;
+}
+
+.help-slot {
+  position: relative;
+  min-height: 152px;
+}
+.help-slot--a, .help-slot--c { transform: translateY(-34px); }
+.help-slot--b, .help-slot--d { transform: translateY(34px); }
+
+.help-card {
+  display: block !important;
+  width: 100% !important;
+  min-height: 152px !important;
+  max-height: none !important;
+  background: #fff !important;
+  border: 1px solid var(--line-light) !important;
+  border-radius: 8px !important;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+.help-card__body {
+  padding: 14px 15px !important;
+  display: grid;
+  gap: 8px;
+  align-content: start;
+}
+.help-card__body h3,
+.help-flyout__body h3 {
+  margin: 0;
+  font-family: var(--font-body) !important;
+  font-size: 0.78rem !important;
+  font-weight: 750;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--ink) !important;
+  line-height: 1.35;
+}
+.help-card__body p,
+.help-flyout__body p {
+  margin: 0;
+  font-size: 0.78rem !important;
+  line-height: 1.45 !important;
+  color: var(--quiet-light) !important;
+}
+.help-card__go {
+  margin-top: 8px !important;
+  font-size: 0.76rem !important;
+  color: var(--voltage) !important;
+  filter: brightness(0.72);
+  font-weight: 650;
+}
+.help-card__tag, .help-card__media { display: none !important; }
+
+/* Flyout — absolute overlay, does not occupy grid space */
+.help-flyout {
+  display: none;
+  position: absolute;
+  top: -10px;
+  height: calc(100% + 20px);
+  width: min(420px, 92vw);
+  z-index: 30;
+  background: #fff;
+  border: 1px solid rgba(61, 245, 200, 0.55);
+  border-radius: 10px;
+  box-shadow: 0 22px 48px -24px rgba(18, 24, 22, 0.32);
+  overflow: hidden;
+  text-decoration: none;
+  align-items: stretch;
+}
+.help-flyout__media {
+  flex: 0 0 36%;
+  background: #1a2420;
+}
+.help-flyout__media svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.help-flyout__body {
+  flex: 1;
+  padding: 16px 18px;
+  display: grid;
+  gap: 8px;
+  align-content: center;
+}
+
+/* Show on hover / focus of the slot (covers card too) */
+.help-slot:hover .help-flyout,
+.help-slot:focus-within .help-flyout {
+  display: flex;
+}
+
+/* Top row: flyout extends to the RIGHT */
+.help-flyout--a, .help-flyout--c {
+  left: 0;
+  right: auto;
+}
+
+/* Bottom row: flyout extends to the LEFT */
+.help-flyout--b, .help-flyout--d {
+  right: 0;
+  left: auto;
+}
+
+@media (max-width: 899px) {
+  .help-grid {
+    grid-template-columns: 1fr !important;
+    width: min(100% - 32px, 420px) !important;
+    max-width: min(100% - 32px, 420px) !important;
+    gap: 14px !important;
+    padding: 12px 0 28px !important;
+  }
+  .help-slot--a, .help-slot--b, .help-slot--c, .help-slot--d {
+    transform: none !important;
+    min-height: 0;
+  }
+  .help-flyout { display: none !important; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .help-flyout { box-shadow: none; }
+}
