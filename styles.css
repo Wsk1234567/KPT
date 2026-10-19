@@ -3045,3 +3045,113 @@ h3 {
   .help-card--d { transform: translateY(14px) !important; }
   .help-card__media { display: none !important; }
 }
+
+/* ===== Help cards FINAL: 2x2 rows 1,3 / 2,4; same-size hover ===== */
+.help-grid {
+  display: grid !important;
+  grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  gap: 18px 20px !important;
+  max-width: min(100% - 48px, 1120px) !important;
+  width: min(100% - 48px, 1120px) !important;
+  margin: 0 auto !important;
+  padding: 12px 0 32px !important;
+  align-items: stretch;
+}
+
+/* row1: A, C  ·  row2: B, D */
+.help-card--a { order: 1; transform: none !important; margin-top: 0 !important; }
+.help-card--c { order: 2; transform: none !important; margin-top: 0 !important; }
+.help-card--b { order: 3; transform: none !important; margin-top: 0 !important; }
+.help-card--d { order: 4; transform: none !important; margin-top: 0 !important; }
+
+.help-card {
+  width: 100% !important;
+  min-height: 148px !important;
+  max-height: 168px !important;
+  aspect-ratio: auto !important;
+  border-radius: 8px !important;
+  background: #fff !important;
+  border: 1px solid var(--line-light) !important;
+  overflow: hidden !important;
+  flex-direction: row !important;
+  /* NO width change on hover */
+}
+.help-card:hover,
+.help-card:focus-visible {
+  width: 100% !important;
+  max-height: 168px !important;
+  min-height: 148px !important;
+  transform: none !important;
+  margin-left: 0 !important;
+  border-color: rgba(61, 245, 200, 0.5) !important;
+  box-shadow: 0 14px 36px -22px rgba(18, 24, 22, 0.25);
+}
+
+.help-card__media {
+  display: none;
+  flex: 0 0 38%;
+  width: 38%;
+  height: 100%;
+  overflow: hidden;
+  opacity: 1;
+  border-radius: 8px 0 0 8px;
+}
+.help-card__media svg {
+  width: 100%;
+  height: 100%;
+  min-height: 0 !important;
+  display: block;
+}
+
+.help-card__body {
+  flex: 1 1 auto !important;
+  padding: 14px 16px !important;
+  gap: 6px !important;
+  height: auto !important;
+  align-content: center !important;
+  min-width: 0;
+}
+
+/* Default: text only in same box */
+.help-card:not(:hover):not(:focus-visible) .help-card__media {
+  display: none !important;
+}
+
+/* Hover: show media left, text stays right — same card size */
+.help-card:hover .help-card__media,
+.help-card:focus-visible .help-card__media {
+  display: block !important;
+}
+
+.help-card__body h3 {
+  font-family: var(--font-body) !important;
+  font-size: 0.78rem !important;
+  font-weight: 750;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  line-height: 1.3;
+  color: var(--ink) !important;
+}
+.help-card__body p {
+  font-size: 0.78rem !important;
+  line-height: 1.4 !important;
+  color: var(--quiet-light) !important;
+  margin: 0 !important;
+}
+.help-card__tag { display: none !important; }
+.help-card__go {
+  margin-top: 8px !important;
+  font-size: 0.76rem !important;
+  padding: 0 !important;
+}
+
+@media (max-width: 899px) {
+  .help-grid {
+    grid-template-columns: 1fr !important;
+    max-width: min(100% - 40px, 420px) !important;
+    width: min(100% - 40px, 420px) !important;
+    gap: 14px !important;
+  }
+  .help-card { max-height: none !important; }
+  .help-card__media { display: none !important; }
+}
