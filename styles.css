@@ -2579,6 +2579,6 @@ h3 {
   max-width: 1100px !important;
 }
 .intro-photo__frame {
-  aspect-ratio: 3.8 / 1 !important;
-  max-height: 280px !important;
+  aspect-ratio: 5 / 1 !important;
+  max-height: 220px !important;
 }
