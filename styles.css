@@ -2566,3 +2566,19 @@ h3 {
   max-height: 340px;
   border: 1px solid rgba(61, 245, 200, 0.15);
 }
+
+
+/* Intro: no org line; larger slogan; longer photo strip */
+.intro-slogan {
+  font-size: clamp(3.4rem, 9vw, 6.5rem) !important;
+  max-width: 14em !important;
+  line-height: 1.02 !important;
+}
+.intro-photo {
+  width: min(100% - 24px, 1100px) !important;
+  max-width: 1100px !important;
+}
+.intro-photo__frame {
+  aspect-ratio: 3 / 1 !important;
+  max-height: 300px !important;
+}
