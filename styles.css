@@ -2928,7 +2928,7 @@ h3 {
 }
 
 .help-band > .wrap {
-  width: min(calc(100% - 48px), 1320px);
+  width: min(calc(100% - 48px), 1560px);
 }
 
 .help-band .section__head {
@@ -3154,17 +3154,24 @@ h3 {
 @media (min-width: 1000px) {
   .help-band {
     min-height: calc(100svh - var(--header-h));
-    padding: clamp(38px, 5.5vh, 60px) 0;
+    padding: clamp(28px, 3.6vh, 38px) 0;
   }
 
   .help-grid {
-    --help-card-size: clamp(180px, min(15vw, 22vh), 240px);
-    --help-column-gap: clamp(24px, 3vw, 52px);
+    --help-card-size: clamp(
+      200px,
+      min(
+        calc((100svh - 330px) / 2),
+        calc((100vw - 160px) / 4)
+      ),
+      350px
+    );
+    --help-column-gap: clamp(24px, 2.5vw, 44px);
     column-gap: var(--help-column-gap);
     grid-template-columns: repeat(4, var(--help-card-size));
     grid-template-rows: repeat(2, var(--help-card-size));
-    margin-top: clamp(24px, 3.5vh, 38px);
-    row-gap: clamp(16px, 2vh, 22px);
+    margin-top: clamp(20px, 2.7vh, 26px);
+    row-gap: clamp(16px, 1.9vh, 20px);
     width: max-content;
   }
 
