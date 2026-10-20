@@ -84,6 +84,45 @@
   } else {
     counters.forEach(animateCount);
   }
+
+  /* Help cards: one-tap photo preview on touch, second tap follows the link. */
+  const helpCards = Array.from(document.querySelectorAll(".help-card[data-touch-preview]"));
+  if (helpCards.length) {
+    const coarsePointer = window.matchMedia("(hover: none) and (pointer: coarse)");
+
+    const setHelpCardOpen = (card, open) => {
+      card.classList.toggle("is-expanded", open);
+      card.setAttribute("aria-expanded", open ? "true" : "false");
+    };
+
+    const closeHelpCards = (except = null) => {
+      helpCards.forEach((card) => {
+        if (card !== except) setHelpCardOpen(card, false);
+      });
+    };
+
+    helpCards.forEach((card) => {
+      card.addEventListener("click", (event) => {
+        if (!coarsePointer.matches || card.classList.contains("is-expanded")) return;
+        event.preventDefault();
+        closeHelpCards(card);
+        setHelpCardOpen(card, true);
+      });
+    });
+
+    document.addEventListener("pointerdown", (event) => {
+      if (!event.target.closest(".help-grid")) closeHelpCards();
+    });
+
+    window.addEventListener("keydown", (event) => {
+      if (event.key === "Escape") {
+        closeHelpCards();
+        document.activeElement?.blur();
+      }
+    });
+
+    coarsePointer.addEventListener("change", () => closeHelpCards());
+  }
 })();
 
 // Rotate original wheel pixels about the measured axle, without moving their centers.
