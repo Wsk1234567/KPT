@@ -2987,9 +2987,10 @@ h3 {
   z-index: 1;
   transition:
     width 340ms var(--ease),
-    transform 240ms ease,
-    border-color 220ms ease,
-    box-shadow 260ms ease;
+    transform 350ms var(--ease),
+    border-color 350ms ease,
+    box-shadow 350ms ease,
+    background-color 350ms ease;
 }
 
 .help-card__body {
@@ -3005,7 +3006,8 @@ h3 {
   transform: none !important;
   transition:
     flex-basis 340ms var(--ease),
-    padding 340ms var(--ease);
+    padding 340ms var(--ease),
+    background-color 350ms ease;
 }
 
 .help-card__body::after {
@@ -3036,6 +3038,7 @@ h3 {
   font-weight: 400;
   letter-spacing: -0.04em;
   line-height: 0.9;
+  transition: color 350ms ease;
 }
 
 .help-card__status {
@@ -3049,6 +3052,7 @@ h3 {
   margin-top: 5px;
   padding: 0;
   text-transform: uppercase;
+  transition: color 350ms ease;
 }
 
 .help-card__copy {
@@ -3067,6 +3071,7 @@ h3 {
   line-height: 1.08;
   margin: 0 0 9px;
   text-transform: none;
+  transition: color 350ms ease;
 }
 
 .help-card__copy p {
@@ -3075,6 +3080,7 @@ h3 {
   line-height: 1.45 !important;
   margin: 0;
   padding: 0;
+  transition: color 350ms ease;
 }
 
 .help-card__go {
@@ -3096,7 +3102,7 @@ h3 {
 .help-card__arrow {
   color: var(--ink);
   font-size: 0.95rem;
-  transition: transform 220ms ease;
+  transition: color 350ms ease, transform 220ms ease;
 }
 
 .help-card__media {
@@ -3127,6 +3133,7 @@ h3 {
 .help-card:hover,
 .help-card:focus-visible,
 .help-card.is-expanded {
+  background: #101916 !important;
   border-color: rgba(0, 124, 107, 0.58) !important;
   box-shadow: 0 24px 52px -28px rgba(15, 45, 38, 0.55);
   outline: none;
@@ -3155,7 +3162,44 @@ h3 {
 
 .help-card:hover .help-card__go,
 .help-card:focus-visible .help-card__go,
-.help-card.is-expanded .help-card__go { background: #e2f3ee !important; }
+.help-card.is-expanded .help-card__go {
+  background: #172822 !important;
+  border-top-color: rgba(98, 222, 198, 0.22);
+  color: #62dec6 !important;
+}
+
+.help-card:hover .help-card__body,
+.help-card:focus-visible .help-card__body,
+.help-card.is-expanded .help-card__body {
+  background: #101916 !important;
+}
+
+.help-card:hover .help-card__number,
+.help-card:focus-visible .help-card__number,
+.help-card.is-expanded .help-card__number {
+  color: rgba(255, 253, 245, 0.58);
+}
+
+.help-card:hover .help-card__status,
+.help-card:focus-visible .help-card__status,
+.help-card.is-expanded .help-card__status,
+.help-card:hover .help-card__arrow,
+.help-card:focus-visible .help-card__arrow,
+.help-card.is-expanded .help-card__arrow {
+  color: #62dec6;
+}
+
+.help-card:hover .help-card__copy h3,
+.help-card:focus-visible .help-card__copy h3,
+.help-card.is-expanded .help-card__copy h3 {
+  color: #fffdf5 !important;
+}
+
+.help-card:hover .help-card__copy p,
+.help-card:focus-visible .help-card__copy p,
+.help-card.is-expanded .help-card__copy p {
+  color: rgba(237, 244, 241, 0.78) !important;
+}
 
 .help-card--photo-right:hover .help-card__topline,
 .help-card--photo-right:hover .help-card__copy,
@@ -3192,6 +3236,7 @@ h3 {
     );
     --help-column-gap: clamp(20px, 1.6vw, 32px);
     --help-expanded-size: calc((100cqw - var(--help-column-gap)) / 2);
+    --help-rest-shift: calc(var(--help-expanded-size) - var(--help-card-size));
     column-gap: var(--help-column-gap);
     container-type: inline-size;
     grid-template-columns:
@@ -3217,9 +3262,15 @@ h3 {
   .help-card--photo-right { left: 0; right: auto; }
   .help-card--photo-left { left: auto; right: 0; }
 
-  .help-card:hover,
-  .help-card:focus-visible,
-  .help-card.is-expanded {
+  /* Keep the four-track expansion geometry, but cluster the resting cards
+     into a central 2x2. Only the active card returns to its expansion edge. */
+  .help-slot--a .help-card { transform: translateX(var(--help-rest-shift)); }
+  .help-slot--d .help-card { transform: translateX(calc(0px - var(--help-rest-shift))); }
+
+  .help-slot .help-card:hover,
+  .help-slot .help-card:focus-visible,
+  .help-slot .help-card.is-expanded {
+    transform: translateX(0) translateY(-2px);
     width: var(--help-expanded-size);
     z-index: 20;
   }
@@ -3366,6 +3417,13 @@ h3 {
 @media (prefers-reduced-motion: reduce) {
   .help-card,
   .help-card__body,
+  .help-card__topline,
+  .help-card__number,
+  .help-card__status,
+  .help-card__copy,
+  .help-card__copy h3,
+  .help-card__copy p,
+  .help-card__go,
   .help-card__media,
   .help-card__arrow {
     transition: none !important;
