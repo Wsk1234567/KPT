@@ -3720,3 +3720,53 @@ h3 {
     top: 28px;
   }
 }
+
+/* Latest Activity ¡ª dark like hero */
+.latest-activity {
+  background: var(--night) !important;
+  color: var(--paper) !important;
+}
+.latest-activity .label {
+  color: var(--voltage) !important;
+}
+.latest-activity h2 {
+  color: var(--paper) !important;
+}
+.latest-activity .muted {
+  color: var(--quiet-dark) !important;
+}
+.latest-activity .act-grid::before {
+  background: linear-gradient(180deg, transparent, var(--voltage) 8%, var(--voltage) 92%, transparent) !important;
+  opacity: 0.7;
+}
+.latest-activity .act-card,
+.latest-activity .act-card--hero,
+.latest-activity .act-card--sm,
+.latest-activity .act-card--wide {
+  background: var(--charcoal) !important;
+  border-color: rgba(61, 245, 200, 0.12) !important;
+  color: var(--paper) !important;
+}
+.latest-activity .act-card__body h3,
+.latest-activity .act-card--hero .act-card__body h3 {
+  color: var(--paper) !important;
+}
+.latest-activity .act-card__body p,
+.latest-activity .act-card--hero .act-card__body p {
+  color: var(--quiet-dark) !important;
+}
+.latest-activity .act-card__pill {
+  background: var(--voltage) !important;
+  color: var(--night) !important;
+}
+.latest-activity .act-card__chip {
+  background: rgba(242, 240, 234, 0.08) !important;
+  color: var(--quiet-dark) !important;
+  border-color: rgba(242, 240, 234, 0.12) !important;
+}
+.latest-activity .act-card::after {
+  border-color: var(--night) !important;
+}
+.latest-activity .act-card:hover {
+  border-color: rgba(61, 245, 200, 0.35) !important;
+}
